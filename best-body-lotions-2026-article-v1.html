@@ -1,0 +1,733 @@
+<!-- DelightfulYou.com | Best Body Lotions 2026 | tag: delightfulyou-20 -->
+
+<style>
+/* ===== BASE ===== */
+.dyu-article { font-family: Georgia, 'Times New Roman', serif; color: #2c2c2c; max-width: 860px; margin: 0 auto; line-height: 1.75; position: relative; }
+.dyu-article h4 { font-family: 'Palatino Linotype', Palatino, serif; color: #1a1a1a; border-bottom: 2px solid #ddd; padding-bottom: 6px; margin-top: 2em; }
+.dyu-article h5 { font-family: 'Palatino Linotype', Palatino, serif; color: #154360; margin-top: 1.2em; }
+.dyu-article p { margin: 0.9em 0; }
+.dyu-article ul { padding-left: 1.4em; }
+.dyu-article li { margin-bottom: 0.4em; }
+
+/* ===== EVIDENCE BASED BUTTON ===== */
+.dyu-evidence-wrapper { position: relative; display: flex; justify-content: flex-end; margin: 0 0 0.8em; z-index: 10; }
+.dyu-evidence-btn { border: 1.5px solid #888; border-radius: 4px; padding: 5px 13px; font-size: 0.82em; font-family: Arial, sans-serif; background: #fff; color: #444; cursor: default; transition: background 0.2s, color 0.2s, border-color 0.2s; white-space: nowrap; }
+.dyu-evidence-wrapper:hover .dyu-evidence-btn { background: #148f77; color: #fff; border-color: #148f77; }
+.dyu-evidence-tooltip { display: none; position: absolute; right: 0; top: 110%; background: #fff; border: 1px solid #ccc; border-radius: 7px; box-shadow: 0 6px 22px rgba(0,0,0,0.13); padding: 16px 18px; width: 320px; font-family: Arial, sans-serif; font-size: 0.84em; line-height: 1.65; color: #333; z-index: 200; }
+.dyu-evidence-tooltip p { margin: 0 0 0.7em; }
+.dyu-evidence-tooltip p:last-child { margin: 0; }
+.dyu-evidence-tooltip::before { content: ''; position: absolute; top: -7px; right: 18px; width: 12px; height: 12px; background: #fff; border-left: 1px solid #ccc; border-top: 1px solid #ccc; transform: rotate(45deg); }
+.dyu-evidence-wrapper:hover .dyu-evidence-tooltip { display: block; }
+
+/* ===== EDITORIAL TEAM ===== */
+.dyu-author-block { margin: 0 0 1.4em; font-family: Arial, sans-serif; border-bottom: 1px solid #e8e8e8; padding-bottom: 1em; }
+.dyu-author-row { display: flex; align-items: center; gap: 5px; margin: 0.28em 0; font-size: 0.87em; color: #555; }
+.dyu-author-role-label { color: #555; white-space: nowrap; flex-shrink: 0; }
+.dyu-author-name-btn { color: #c0392b; font-weight: 600; background: none; border: none; padding: 0; cursor: pointer; font-size: inherit; font-family: inherit; position: relative; display: inline-block; line-height: inherit; }
+.dyu-author-name-btn:hover { text-decoration: underline; color: #922b21; }
+.dyu-author-popup { visibility: hidden; opacity: 0; pointer-events: none; position: absolute; left: 0; top: calc(100% + 8px); background: #fff; border: 1px solid #e4e4e4; border-radius: 10px; box-shadow: 0 8px 26px rgba(0,0,0,0.12); padding: 15px 16px; min-width: 260px; max-width: 310px; z-index: 300; text-align: left; white-space: normal; transition: opacity 0.15s ease, visibility 0.15s ease; }
+.dyu-author-popup::before { content: ''; position: absolute; top: -6px; left: 18px; width: 10px; height: 10px; background: #fff; border-left: 1px solid #e4e4e4; border-top: 1px solid #e4e4e4; transform: rotate(45deg); }
+.dyu-author-name-btn:hover .dyu-author-popup,
+.dyu-author-name-btn:focus-within .dyu-author-popup,
+.dyu-author-name-btn.active .dyu-author-popup { visibility: visible; opacity: 1; pointer-events: auto; }
+.dyu-author-popup-name { font-weight: 700; color: #c0392b; font-size: 1em; display: block; margin-bottom: 1px; }
+.dyu-author-popup-title { color: #c0392b; font-size: 0.85em; display: block; margin-bottom: 8px; }
+.dyu-author-popup-cred { color: #555; font-size: 0.84em; display: block; border-top: 1px solid #f0f0f0; padding-top: 9px; margin-bottom: 10px; line-height: 1.55; }
+.dyu-author-popup-links { display: flex; gap: 7px; }
+.dyu-author-popup-link { display: inline-flex; align-items: center; gap: 4px; border-radius: 4px; padding: 4px 11px; font-size: 0.82em; text-decoration: none; font-weight: 600; border: 1.5px solid; transition: background 0.15s, color 0.15s; }
+.dyu-author-popup-link.li { color: #0077b5; border-color: #0077b5; background: #fff; }
+.dyu-author-popup-link.li:hover { background: #0077b5; color: #fff; }
+.dyu-author-popup-link.web { color: #555; border-color: #999; background: #fff; }
+.dyu-author-popup-link.web:hover { background: #555; color: #fff; }
+@media (max-width: 480px) {
+  .dyu-author-popup { min-width: min(250px, 82vw); max-width: min(300px, 88vw); }
+}
+
+/* ===== DIVIDER ===== */
+.dyu-divider { border: none; border-top: 2px dashed #aed6f1; margin: 2.5em 0; }
+
+/* ===== TOC ===== */
+.dyu-toc-toggle { display: block; width: 100%; background: linear-gradient(90deg, #1abc9c, #148f77); color: #fff; border: none; border-radius: 8px; padding: 11px 20px; font-size: 1em; font-family: Arial, sans-serif; font-weight: 700; cursor: pointer; text-align: left; margin: 1.5em 0 0; }
+.dyu-toc-content { display: none; background: #f9f9f9; border: 1px solid #ddd; border-radius: 0 0 8px 8px; padding: 14px 20px; margin-bottom: 1.5em; }
+.dyu-toc-content.open { display: block; }
+.dyu-toc-content ol { margin: 0; padding-left: 1.3em; }
+.dyu-toc-content li { margin-bottom: 0.35em; }
+.dyu-toc-content a { color: #148f77; text-decoration: none; }
+.dyu-toc-content a:hover { text-decoration: underline; }
+
+/* ===== TABLE ===== */
+.dyu-table-wrapper { overflow-x: auto; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin: 0.5em 0 1.5em; }
+.dyu-compare-table { width: 100%; min-width: 1050px; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 0.88em; }
+.dyu-compare-table thead tr { background: linear-gradient(90deg, #1abc9c, #148f77); color: #fff; }
+.dyu-compare-table th { padding: 11px 10px; text-align: left; white-space: nowrap; }
+.dyu-compare-table td { padding: 10px 10px; vertical-align: middle; }
+.dyu-compare-table th:nth-child(1) { position: sticky; left: 0; z-index: 3; background: linear-gradient(90deg, #1abc9c, #148f77); }
+.dyu-compare-table th:nth-child(2) { position: sticky; left: 36px; z-index: 3; background: linear-gradient(90deg, #1abc9c, #148f77); box-shadow: 2px 0 5px rgba(0,0,0,0.1); }
+.dyu-compare-table td:nth-child(1) { position: sticky; left: 0; z-index: 2; }
+.dyu-compare-table td:nth-child(2) { position: sticky; left: 36px; z-index: 2; box-shadow: 2px 0 5px rgba(0,0,0,0.08); }
+.dyu-compare-table tbody tr:nth-child(1) td { background: #fff9f0; }
+.dyu-compare-table tbody tr:nth-child(2) td { background: #f0f9f5; }
+.dyu-compare-table tbody tr:nth-child(3) td { background: #f5f0ff; }
+.dyu-compare-table tbody tr:nth-child(4) td { background: #fff0f5; }
+.dyu-compare-table tbody tr:nth-child(5) td { background: #f0f8ff; }
+.dyu-compare-table tbody tr:nth-child(6) td { background: #fffaf0; }
+.dyu-compare-table tbody tr:nth-child(7) td { background: #f5fff0; }
+.dyu-compare-table tbody tr:nth-child(8) td { background: #fff5f0; }
+.dyu-compare-table tbody tr:nth-child(9) td { background: #f0fff5; }
+.dyu-compare-table tbody tr:nth-child(10) td { background: #f8f0ff; }
+.dyu-compare-table tbody tr:nth-child(1) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(1) td:nth-child(2){background:#fff9f0;}
+.dyu-compare-table tbody tr:nth-child(2) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(2) td:nth-child(2){background:#f0f9f5;}
+.dyu-compare-table tbody tr:nth-child(3) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(3) td:nth-child(2){background:#f5f0ff;}
+.dyu-compare-table tbody tr:nth-child(4) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(4) td:nth-child(2){background:#fff0f5;}
+.dyu-compare-table tbody tr:nth-child(5) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(5) td:nth-child(2){background:#f0f8ff;}
+.dyu-compare-table tbody tr:nth-child(6) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(6) td:nth-child(2){background:#fffaf0;}
+.dyu-compare-table tbody tr:nth-child(7) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(7) td:nth-child(2){background:#f5fff0;}
+.dyu-compare-table tbody tr:nth-child(8) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(8) td:nth-child(2){background:#fff5f0;}
+.dyu-compare-table tbody tr:nth-child(9) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(9) td:nth-child(2){background:#f0fff5;}
+.dyu-compare-table tbody tr:nth-child(10) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(10) td:nth-child(2){background:#f8f0ff;}
+.dyu-table-img { width: 56px; height: 56px; object-fit: contain; border-radius: 6px; }
+.dyu-stars { color: #f5a623; font-size: 1em; }
+.dyu-review-count { font-size: 0.8em; color: #777; display: block; margin-top: 2px; }
+.dyu-btn-amazon { display: inline-block; background: linear-gradient(to bottom, #f7dfa5, #f0c14b); border: 1px solid #a88734; border-radius: 4px; padding: 6px 13px; font-size: 0.82em; font-weight: 700; color: #111; text-decoration: none; white-space: nowrap; }
+.dyu-btn-amazon:hover { background: linear-gradient(to bottom, #f0c14b, #e8b429); }
+
+/* ===== SCROLL HINT ===== */
+.dyu-scroll-hint { font-family: Arial, sans-serif; font-size: 0.76em; color: #aaa; text-align: center; margin: 0 0 0.5em; letter-spacing: 0.01em; }
+
+/* ===== BADGE ===== */
+.dyu-rank-badge { display: inline-block; background: linear-gradient(135deg, #1abc9c, #148f77); color: #fff; font-size: 0.72em; font-weight: 700; border-radius: 20px; padding: 3px 12px; margin-bottom: 2px; font-family: Arial, sans-serif; }
+.dyu-rank-badge + h4 { margin-top: 0.1em !important; }
+
+/* ===== HOSTINGER WRAP ===== */
+.dyu-hostinger-wrap { border: 2px solid #d4a843; border-radius: 10px; box-shadow: 0 3px 14px rgba(212,168,67,0.18); padding: 10px; margin: 0.5em 0 1em; }
+/* Hostinger plugin price+button inline */
+.dyu-hostinger-wrap .ha-price-wrapper,
+.dyu-hostinger-wrap [class*="price-wrapper"],
+.dyu-hostinger-wrap [class*="product-footer"] { display: flex !important; align-items: center !important; gap: 14px !important; flex-wrap: nowrap !important; }
+.dyu-hostinger-wrap [class*="price"] { font-size: 1.1em !important; white-space: nowrap !important; }
+.dyu-hostinger-wrap [class*="buy-button"],
+.dyu-hostinger-wrap a[class*="button"] { padding: 7px 16px !important; font-size: 0.88em !important; white-space: nowrap !important; }
+
+/* ===== GOLD BLOCK ===== */
+.dyu-gold-block { border: none; padding: 4px 0; margin: 0.8em 0; }
+
+/* ===== PROS CONS ===== */
+.dyu-pros-cons { display: flex; gap: 14px; margin: 1em 0; flex-wrap: wrap; }
+.dyu-pros, .dyu-cons { flex: 1; min-width: 200px; background: #f8f8f8; border-radius: 6px; padding: 10px 14px; }
+.dyu-pros { border-top: 3px solid #27ae60; }
+.dyu-cons { border-top: 3px solid #e74c3c; }
+.dyu-pros h6, .dyu-cons h6 { margin: 0 0 7px; font-family: Arial, sans-serif; font-size: 0.88em; text-transform: uppercase; letter-spacing: 0.04em; }
+.dyu-pros h6 { color: #27ae60; }
+.dyu-cons h6 { color: #e74c3c; }
+.dyu-pros ul, .dyu-cons ul { margin: 0; padding-left: 1.2em; font-size: 0.9em; }
+
+/* ===== REVIEWS ===== */
+.dyu-review-block { background: #fafafa; border-left: 3px solid #1abc9c; border-radius: 5px; padding: 10px 14px; margin: 0.7em 0; font-size: 0.92em; }
+.dyu-review-author { font-size: 0.82em; color: #555; margin-top: 5px; }
+
+/* ===== OUR TAKE ===== */
+.dyu-our-take { background: transparent; border-left: 3px solid #c0392b; padding: 8px 14px; margin: 1em 0; border-radius: 4px; font-size: 0.95em; }
+.dyu-our-take strong { color: #c0392b; }
+
+/* ===== FAQ ===== */
+.dyu-faq-item { margin-bottom: 1.4em; }
+.dyu-faq-q { font-family: 'Palatino Linotype', Palatino, serif; font-weight: 700; color: #154360; font-size: 1.02em; margin-bottom: 0.35em; }
+
+/* ===== BLUE BOX ===== */
+.dyu-helpful-box { background: #e8f4fd; border: 1px solid #aed6f1; border-radius: 8px; padding: 18px 22px; margin: 2em 0; }
+.dyu-helpful-box p { margin: 0.4em 0; font-family: Arial, sans-serif; font-size: 0.95em; }
+.dyu-helpful-box strong { color: #1a5276; }
+
+* { box-sizing: border-box; }
+.dyu-article { width: 100%; max-width: 860px; }
+@media (max-width: 580px) {
+  .dyu-article { padding: 0 4px; }
+  .dyu-pros-cons { flex-direction: column; }
+  .dyu-evidence-tooltip { width: min(280px, 90vw); right: 0; }
+  .dyu-author-popup { min-width: min(220px, 80vw); max-width: min(280px, 85vw); }
+  .dyu-table-wrapper { margin-left: -4px; margin-right: -4px; }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var tocToggle = document.getElementById('dyuTocToggle');
+  if (tocToggle) {
+    tocToggle.addEventListener('click', function() {
+      var content = document.getElementById('dyuTocContent');
+      var label = tocToggle.querySelector('span');
+      if (content.classList.contains('open')) {
+        content.classList.remove('open');
+        label.textContent = 'Show Table of Contents';
+      } else {
+        content.classList.add('open');
+        label.textContent = 'Hide Table of Contents';
+      }
+    });
+  }
+  // Author popup: click to open on mobile, hover on desktop
+  document.querySelectorAll('.dyu-author-name-btn').forEach(function(btn) {
+    // Click toggle (mobile)
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isActive = btn.classList.contains('active');
+      document.querySelectorAll('.dyu-author-name-btn').forEach(function(b) { b.classList.remove('active'); });
+      if (!isActive) btn.classList.add('active');
+    });
+    // Hover (desktop)
+    btn.addEventListener('mouseenter', function() {
+      document.querySelectorAll('.dyu-author-name-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+    });
+    btn.addEventListener('mouseleave', function(e) {
+      // Keep open if cursor moves into the popup itself
+      var popup = btn.querySelector('.dyu-author-popup');
+      if (popup && popup.contains(e.relatedTarget)) return;
+      btn.classList.remove('active');
+    });
+  });
+  // Keep popup open when hovering inside it
+  document.querySelectorAll('.dyu-author-popup').forEach(function(popup) {
+    popup.addEventListener('mouseleave', function(e) {
+      var btn = popup.closest('.dyu-author-name-btn');
+      if (btn && !btn.contains(e.relatedTarget)) btn.classList.remove('active');
+    });
+  });
+  // Close on outside click
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.dyu-author-name-btn').forEach(function(b) { b.classList.remove('active'); });
+  });
+});
+</script>
+
+<div class="dyu-article">
+
+<div class="dyu-author-block">
+  <div class="dyu-evidence-wrapper">
+    <button class="dyu-evidence-btn">&#10003; Evidence Based</button>
+    <div class="dyu-evidence-tooltip">
+      <p>Every product here was independently chosen by the GlowPick editorial team based on ingredients, real customer feedback, and hands-on evaluation. No brand pays for coverage, no free products were accepted, and this guide contains Amazon affiliate links &mdash; we earn a small commission if you buy through them, at no extra cost to you.</p>
+    </div>
+  </div>
+
+  <div class="dyu-author-row">
+    <span class="dyu-author-role-label">Medically reviewed by</span>
+    <button class="dyu-author-name-btn">
+      Dr. Farhaad Riyaz
+      <div class="dyu-author-popup">
+        <span class="dyu-author-popup-name">Dr. Farhaad Riyaz</span>
+        <span class="dyu-author-popup-title">MD, FAAD, FACMS</span>
+        <span class="dyu-author-popup-cred">Board-certified dermatologist and Mohs surgeon with extensive clinical experience treating sensitive and dry skin conditions.</span>
+        <div class="dyu-author-popup-links">
+          <a href="https://drfarhaadriyaz.com/" class="dyu-author-popup-link web" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg> Website</a>
+        </div>
+      </div>
+    </button>
+  </div>
+  <div class="dyu-author-row">
+    <span class="dyu-author-role-label">Reviewed by</span>
+    <button class="dyu-author-name-btn">
+      Terri L. Watts
+      <div class="dyu-author-popup">
+        <span class="dyu-author-popup-name">Terri L. Watts</span>
+        <span class="dyu-author-popup-title">Skin Care Specialist</span>
+        <span class="dyu-author-popup-cred">Skin care specialist and product formulator with over two decades of experience evaluating clinical and consumer skincare.</span>
+        <div class="dyu-author-popup-links">
+          <a href="https://www.wattsbeautyusa.com/" class="dyu-author-popup-link web" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg> Website</a>
+        </div>
+      </div>
+    </button>
+  </div>
+  <div class="dyu-author-row">
+    <span class="dyu-author-role-label">Written by</span>
+    <button class="dyu-author-name-btn">
+      Anjali Sayee
+      <div class="dyu-author-popup">
+        <span class="dyu-author-popup-name">Anjali Sayee</span>
+        <span class="dyu-author-popup-title">BTech, Beauty & Wellness Writer</span>
+        <span class="dyu-author-popup-cred">Skin care writer with a biotech background and a focus on evidence-based product evaluation.</span>
+        <div class="dyu-author-popup-links">
+          <a href="https://www.linkedin.com/in/anjali-sayee/" class="dyu-author-popup-link li" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg> LinkedIn</a>
+        </div>
+      </div>
+    </button>
+  </div>
+  <div class="dyu-author-row">
+    <span class="dyu-author-role-label">Edited by</span>
+    <button class="dyu-author-name-btn">
+      Shiboli Chakraborti
+      <div class="dyu-author-popup">
+        <span class="dyu-author-popup-name">Shiboli Chakraborti</span>
+        <span class="dyu-author-popup-title">MA (English), Certified Skin Care Coach</span>
+        <span class="dyu-author-popup-cred">Senior beauty editor and certified skin care coach with a decade of experience in long-form skincare publishing.</span>
+        <div class="dyu-author-popup-links">
+          <a href="https://www.linkedin.com/in/shibolichakraborti/" class="dyu-author-popup-link li" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg> LinkedIn</a>
+        </div>
+      </div>
+    </button>
+  </div>
+  <div class="dyu-author-row">
+    <span class="dyu-author-role-label">Fact-checked by</span>
+    <button class="dyu-author-name-btn">
+      Swathi E
+      <div class="dyu-author-popup">
+        <span class="dyu-author-popup-name">Swathi E</span>
+        <span class="dyu-author-popup-title">MA (English Literature)</span>
+        <span class="dyu-author-popup-cred">Beauty fact-checker focused on ingredient claims, clinical sources, and editorial accuracy.</span>
+        <div class="dyu-author-popup-links">
+          <a href="https://www.linkedin.com/in/swathi-e/" class="dyu-author-popup-link li" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg> LinkedIn</a>
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
+
+<p>Body lotion is one of the most underrated parts of a skincare routine. Most people grab whatever's on the closest shelf, then wonder why their elbows are still cracked in February or why their legs look dull through summer. The right lotion does real work &mdash; it rebuilds the skin barrier, holds moisture for hours, and, with some formulas, fades old marks over weeks of consistent use.</p>
+<p>This guide runs through ten body lotions the GlowPick team has tested across different skin types, climates, and price points. Some are dermatologist-grade workhorses, some are scented for the experience, and one is a whipped body butter that holds up for a genuine 72 hours. Prices run from under eight dollars to about thirty-six, so there is something here for every routine.</p>
+
+<button class="dyu-toc-toggle" id="dyuTocToggle"><span>Show Table of Contents</span></button>
+<div class="dyu-toc-content" id="dyuTocContent">
+  <ol>
+    <li><a href="#comparison-table">Quick Comparison Table</a></li>
+      <li><a href="#review-1">1. Jergens Shea Fusion Vanilla Crush Body Lotion</a></li>
+      <li><a href="#review-2">2. eos Shea Better Body Lotion Vanilla Cashmere</a></li>
+      <li><a href="#review-3">3. eos Cashmere Whipped Oil Body Butter</a></li>
+      <li><a href="#review-4">4. THISWORKS In The Zone Body Lotion</a></li>
+      <li><a href="#review-5">5. CeraVe Moisturizing Cream</a></li>
+      <li><a href="#review-6">6. Vaseline Intensive Care Cocoa Radiant (3-pack)</a></li>
+      <li><a href="#review-7">7. Aveeno Daily Moisturizing Body Lotion</a></li>
+      <li><a href="#review-8">8. Neutrogena Hydro Boost Body Gel Cream</a></li>
+      <li><a href="#review-9">9. Palmer's Cocoa Butter Formula Body Lotion</a></li>
+      <li><a href="#review-10">10. Saltair Pink Beach Body Lotion (2-pack)</a></li>
+    <li><a href="#faq">Frequently Asked Questions</a></li>
+  </ol>
+</div>
+
+<h4 id="comparison-table">Quick Comparison Table</h4>
+<p class="dyu-scroll-hint">&#x2194;&nbsp; Scroll the table horizontally to view the full table</p>
+<div class="dyu-table-wrapper">
+<table class="dyu-compare-table">
+<thead><tr><th>#</th><th>Image</th><th>Product</th><th>Best For</th><th>Price</th><th>Rating</th><th>Buy</th></tr></thead>
+<tbody>
+<tr>
+  <td><strong>1</strong></td>
+  <td><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/31SZXsDQUpL.jpg" alt="Jergens Shea Fusion Vanilla Crush Body Lotion" loading="lazy"></td>
+  <td><strong>Jergens Shea Fusion Vanilla Crush Body Lotion</strong><br><small>14 fl oz | shea butter + vitamin E</small></td>
+  <td>Warm vanilla scent</td>
+  <td>$7.47</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.5<span class="dyu-review-count">1,512 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B0FKC23886?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>2</strong></td>
+  <td><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/31+ACcHk+yL.jpg" alt="eos Shea Better Body Lotion Vanilla Cashmere" loading="lazy"></td>
+  <td><strong>eos Shea Better Body Lotion Vanilla Cashmere</strong><br><small>16 fl oz | vegan | pump bottle</small></td>
+  <td>Daily lightweight hydration</td>
+  <td>$9.97</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.7<span class="dyu-review-count">73,088 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B08KT2Z93D?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>3</strong></td>
+  <td><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/41zgIYNGA-L.jpg" alt="eos Cashmere Whipped Oil Body Butter" loading="lazy"></td>
+  <td><strong>eos Cashmere Whipped Oil Body Butter</strong><br><small>10 oz | whipped oil + butter blend</small></td>
+  <td>Deep 72-hour moisture for very dry skin</td>
+  <td>$12.98</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.8<span class="dyu-review-count">4,137 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B0CRQYQBZ4?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>4</strong></td>
+  <td><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/31Z6ck0YW+S.jpg" alt="THISWORKS In The Zone Body Lotion" loading="lazy"></td>
+  <td><strong>THISWORKS In The Zone Body Lotion</strong><br><small>10.1 fl oz | natural essential-oil blend</small></td>
+  <td>Aromatherapy + therapeutic skincare</td>
+  <td>$34.00</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.6<span class="dyu-review-count">522 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B08KQ9RNMD?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>5</strong></td>
+  <td><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/41ba2zJNMXL.jpg" alt="CeraVe Moisturizing Cream" loading="lazy"></td>
+  <td><strong>CeraVe Moisturizing Cream</strong><br><small>19 oz | fragrance-free | dermatologist-developed</small></td>
+  <td>Eczema-prone and very dry skin</td>
+  <td>$18.96</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.7<span class="dyu-review-count">144,323 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B00TTD9BRC?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>6</strong></td>
+  <td><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/51SKPLFjVKL.jpg" alt="Vaseline Intensive Care Cocoa Radiant (3-pack)" loading="lazy"></td>
+  <td><strong>Vaseline Intensive Care Cocoa Radiant (3-pack)</strong><br><small>3 x 20.3 fl oz | pure cocoa butter</small></td>
+  <td>Glow + multi-bottle value</td>
+  <td>$22.47</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.8<span class="dyu-review-count">15,185 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B01HTJTV4U?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>7</strong></td>
+  <td><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/311GZAliEUL.jpg" alt="Aveeno Daily Moisturizing Body Lotion" loading="lazy"></td>
+  <td><strong>Aveeno Daily Moisturizing Body Lotion</strong><br><small>18 fl oz | prebiotic oat | fragrance-free</small></td>
+  <td>Sensitive, fragrance-free skin</td>
+  <td>$9.97</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.8<span class="dyu-review-count">57,348 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B001459IEE?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>8</strong></td>
+  <td><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/31yWroLtuKL.jpg" alt="Neutrogena Hydro Boost Body Gel Cream" loading="lazy"></td>
+  <td><strong>Neutrogena Hydro Boost Body Gel Cream</strong><br><small>16 oz | gel-cream texture | fragrance-free</small></td>
+  <td>Hot weather + fast absorption</td>
+  <td>$11.99</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.7<span class="dyu-review-count">25,931 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B07DJPC8JB?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>9</strong></td>
+  <td><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/41pEyLXElSL.jpg" alt="Palmer's Cocoa Butter Formula Body Lotion" loading="lazy"></td>
+  <td><strong>Palmer's Cocoa Butter Formula Body Lotion</strong><br><small>13.5 oz | pure cocoa butter + vitamin E</small></td>
+  <td>Stretch marks, scars, and the iconic cocoa scent</td>
+  <td>$7.19</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.8<span class="dyu-review-count">48,498 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B0009F3O8Q?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>10</strong></td>
+  <td><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/41E3AwqPOcL.jpg" alt="Saltair Pink Beach Body Lotion (2-pack)" loading="lazy"></td>
+  <td><strong>Saltair Pink Beach Body Lotion (2-pack)</strong><br><small>2 x 10 oz tubes | Pink Beach scent | vegan</small></td>
+  <td>Trendy beach scent + viral favourite</td>
+  <td>$28.00</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.6<span class="dyu-review-count">737 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B0BVPH918S?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<hr class="dyu-divider">
+
+<h4>In-Depth Product Reviews</h4>
+
+<div id="review-1">
+<span class="dyu-rank-badge">&#127958;&#65039; Best Scented</span>
+<h4>1. Jergens Shea Fusion Vanilla Crush Body Lotion, Moisturizer with Shea Butter & Vitamin E, 14 Fl Oz</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B0FKC23886","asin_manual":"B0FKC23886","items":{"B0FKC23886":{"asin":"B0FKC23886","title":"Jergens Shea Fusion Vanilla Crush Body Lotion, Moisturizer with Shea Butter & Vitamin E, 14 Fl Oz","url":"https://www.amazon.com/dp/B0FKC23886","image_url":"https://m.media-amazon.com/images/I/31SZXsDQUpL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>A new Jergens release that pairs warm vanilla with shea butter for a lotion that smells like dessert and feels like everyday skincare.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#127852;&nbsp; Vanilla Crush scent that lingers gently for hours without overpowering perfume or deodorant</li>
+<li>&#127807;&nbsp; Shea butter blended with vitamin E for softness and a touch of antioxidant repair</li>
+<li>&#128167;&nbsp; Sinks in within seconds, no greasy film, no sticky residue on clothes</li>
+<li>&#128170;&nbsp; 14 oz bottle that lasts a couple of months with daily full-body use</li>
+<li>&#128176;&nbsp; Drugstore price for a scent that consistently outperforms department-store equivalents</li>
+<li>&#127807;&nbsp; Pairs naturally with the matching body wash if you want the scent to layer</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Vanilla scent that smells like real bakery, not synthetic</li><li>Sinks in fast, dressed within a minute</li><li>Big 14 oz size for the price</li><li>Pump dispenses cleanly with one hand</li><li>Lightweight enough for daily use year-round</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Scent is on the sweeter side, not for fragrance-sensitive folks</li><li>Thinner consistency than the original Jergens range</li><li>Not rich enough on its own for very dry winter skin</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"This is now my daily lotion. The vanilla scent is the kind that makes my husband ask what perfume I'm wearing. It is just the lotion. Lasts about six hours on my arms before fading."</p><p class="dyu-review-author">Megan K. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"Picked it up on a whim and now I'm on my third bottle. Light, sinks in fast, and the scent is sweet without being sickly. My only complaint is wanting it in a bigger size."</p><p class="dyu-review-author">Carla H. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> If scent is the deciding factor, this is the easy pick. The vanilla is warm and bakery-style rather than chemical, and the shea butter base actually moisturises rather than just carrying fragrance. Skip it if you want unscented.</p></div>
+</div>
+</div>
+
+<div id="review-2">
+<span class="dyu-rank-badge">&#127800; Best Lightweight</span>
+<h4>2. eos Shea Better Body Lotion Vanilla Cashmere, 24-Hour Moisture, Lightweight & Non-Greasy, Vegan, 16 fl oz</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B08KT2Z93D","asin_manual":"B08KT2Z93D","items":{"B08KT2Z93D":{"asin":"B08KT2Z93D","title":"eos Shea Better Body Lotion Vanilla Cashmere, 24-Hour Moisture, Lightweight & Non-Greasy, Vegan, 16 fl oz","url":"https://www.amazon.com/dp/B08KT2Z93D","image_url":"https://m.media-amazon.com/images/I/31+ACcHk+yL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>A vegan, fast-absorbing lotion that locks in 24 hours of hydration without the heaviness most shea formulas leave behind.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#127797;&nbsp; 100% vegan, cruelty-free, made without parabens, phthalates, or sulfates</li>
+<li>&#9201;&#65039;&nbsp; Absorbs in seconds, no waiting around before getting dressed</li>
+<li>&#127852;&nbsp; Vanilla Cashmere is one of the most loved scents in eos's range</li>
+<li>&#127807;&nbsp; Natural shea butter for daily softening without weighing skin down</li>
+<li>&#128172;&nbsp; 73,000+ Amazon reviews and a 4.7 average — one of the most popular body lotions on the platform</li>
+<li>&#128138;&nbsp; 16 oz pump bottle that lasts most users six to eight weeks</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Genuinely lightweight, almost gel-like in feel</li><li>24-hour moisture claim actually holds up</li><li>Iconic Vanilla Cashmere scent</li><li>Pump bottle with no clogging issues</li><li>Vegan and cruelty-free</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Scent is strong — overpowering for some noses</li><li>Not heavy enough alone for very dry winter skin</li><li>Pump bottle gets stuck in the last 10% of product</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"I've gone through six bottles in two years. Goes on like silk, smells gorgeous, and I never feel like I'm leaving a residue on the sheets at night. The pump even lasts the whole bottle if you don't slam it."</p><p class="dyu-review-author">Lauren P. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"My favourite everyday lotion. I keep one at the desk, one in my bag, and one by the bed. The scent is sweet but not cloying. Perfect for after a shower in the morning."</p><p class="dyu-review-author">Naomi T. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> Earned its 73,000-review fanbase honestly. The texture is the lightest on this list, the scent is the kind people compliment, and the price-to-size ratio beats most premium alternatives. Best for normal-to-slightly-dry skin.</p></div>
+</div>
+</div>
+
+<div id="review-3">
+<span class="dyu-rank-badge">&#129473; Best Body Butter</span>
+<h4>3. eos Cashmere Whipped Oil Body Butter, Vanilla Cashmere, 72 Hour Weightless Moisture, 10 oz</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B0CRQYQBZ4","asin_manual":"B0CRQYQBZ4","items":{"B0CRQYQBZ4":{"asin":"B0CRQYQBZ4","title":"eos Cashmere Whipped Oil Body Butter, Vanilla Cashmere, 72 Hour Weightless Moisture, 10 oz","url":"https://www.amazon.com/dp/B0CRQYQBZ4","image_url":"https://m.media-amazon.com/images/I/41zgIYNGA-L.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>A whipped butter–oil hybrid that melts on contact and locks in three days of moisture without the sticky finish most body butters leave behind.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#10024;&nbsp; Whipped texture that feels closer to mousse than traditional body butter</li>
+<li>&#9203;&nbsp; 72-hour moisture that holds up through showers and outfit changes</li>
+<li>&#127852;&nbsp; Vanilla Cashmere scent matches the eos lotion line perfectly</li>
+<li>&#128123;&nbsp; Weightless finish — no slip, no sticky layer, dressing within a minute</li>
+<li>&#128064;&nbsp; Goes on white but melts clear, no streaks or residue on darker skin</li>
+<li>&#127807;&nbsp; Vegan, cruelty-free, no parabens or phthalates</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Truly 72-hour moisture, tested through workouts</li><li>Weightless texture despite the rich formula</li><li>Smells incredible without being overwhelming</li><li>Excellent for night application</li><li>A little goes a long way — jar lasts months</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Smaller jar than expected for the price point</li><li>Scent transfers to clothes and lingers</li><li>Jar format means fingers in product every time</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"I tried this on a whim and now I refuse to use anything else at night. Two days after I apply it I can still feel the softness. My partner keeps asking what I'm wearing — every time it's just this."</p><p class="dyu-review-author">Brittany L. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"Best body butter I've used and I've tried the expensive ones. It melts in instantly. My elbows used to be permanently rough — three weeks of nightly use and they actually feel like normal skin."</p><p class="dyu-review-author">Diana M. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> Genuinely 72 hours, which almost no other body butter delivers. Lightweight despite the richness, which is the rare combination that justifies the price. Use it at night for the best results.</p></div>
+</div>
+</div>
+
+<div id="review-4">
+<span class="dyu-rank-badge">&#127769; Best Premium Pick</span>
+<h4>4. THISWORKS In The Zone Body Lotion, Natural Therapeutic Lotion, 300ml, 10.1 fl. oz</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B08KQ9RNMD","asin_manual":"B08KQ9RNMD","items":{"B08KQ9RNMD":{"asin":"B08KQ9RNMD","title":"THISWORKS In The Zone Body Lotion, Natural Therapeutic Lotion, 300ml, 10.1 fl. oz","url":"https://www.amazon.com/dp/B08KQ9RNMD","image_url":"https://m.media-amazon.com/images/I/31Z6ck0YW+S.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>A high-end therapeutic lotion that blends moisturisers with focus-blend essential oils — half skincare, half ritual.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#127807;&nbsp; Natural therapeutic formula made in the UK with a focus essential-oil blend</li>
+<li>&#128293;&nbsp; Designed for daytime application — bergamot, eucalyptus, and rosemary lift attention</li>
+<li>&#129516;&nbsp; Apothecary-grade ingredient list with shea butter and aloe as the moisture base</li>
+<li>&#127870;&nbsp; 10.1 fl oz glass-feel bottle that looks the part on a bathroom shelf</li>
+<li>&#128104;&#8205;&#9877;&#65039;&nbsp; Brand stocked at premium spas and used by therapists in clinical settings</li>
+<li>&#128302;&nbsp; Cruelty-free, paraben-free, dermatologically tested</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Real essential oils, not synthetic dupes</li><li>The scent genuinely helps focus during work</li><li>Premium feel from the bottle to the formula</li><li>Hydrates without feeling like a lotion</li><li>Multi-purpose — body, hand, and ritual</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Premium price for a 10 oz bottle</li><li>Scent is herbal and adult — not for those who want sweet</li><li>Niche use case, not a daily go-to for most</li><li>Limited US availability outside Amazon</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"Bought this for working from home and it's become a strange anchor in my morning. I rub it in, the rosemary hits, and I'm at my desk feeling like I have a plan. Worth the price for that alone."</p><p class="dyu-review-author">Sophia G. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"Treat-yourself lotion. I use it on Mondays when I need to be sharp. Lasts ages because you only need a little. The bergamot-rosemary combo is unusual but I'm hooked."</p><p class="dyu-review-author">Aisha R. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> Niche premium pick that earns its price tag if you value the ritual as much as the skincare. The essential-oil blend is real and noticeable. Skip it if you just want hydration — there are cheaper formulas that do that part better.</p></div>
+</div>
+</div>
+
+<div id="review-5">
+<span class="dyu-rank-badge">&#127942; Best Overall</span>
+<h4>5. CeraVe Moisturizing Cream, Body and Face Moisturizer for Dry Skin, with Hyaluronic Acid and Ceramides, Fragrance Free, 19 Ounce</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B00TTD9BRC","asin_manual":"B00TTD9BRC","items":{"B00TTD9BRC":{"asin":"B00TTD9BRC","title":"CeraVe Moisturizing Cream, Body and Face Moisturizer for Dry Skin, with Hyaluronic Acid and Ceramides, Fragrance Free, 19 Ounce","url":"https://www.amazon.com/dp/B00TTD9BRC","image_url":"https://m.media-amazon.com/images/I/41ba2zJNMXL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>Dermatologists have been recommending this for years, and the 144,000+ Amazon reviews suggest patients are actually listening.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#129529;&nbsp; 19 oz tub — more product than most competitors at a lower price per ounce</li>
+<li>&#128300;&nbsp; Three ceramides that work together to rebuild your skin's natural barrier</li>
+<li>&#128167;&nbsp; Hyaluronic acid pulls water toward the skin rather than just sitting on top</li>
+<li>&#128683;&nbsp; No fragrance, no oils, non-comedogenic — safe for face and body both</li>
+<li>&#127769;&nbsp; MVE delivery system slowly releases moisture for a full 24 hours</li>
+<li>&#128104;&#8205;&#9877;&#65039;&nbsp; Co-developed with dermatologists and recommended across clinics worldwide</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Safe for face and body</li><li>Completely unscented</li><li>Sinks in cleanly, no greasy film</li><li>Works well even for eczema-prone skin</li><li>Genuinely great value for the size</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Tub format — fingers in the product every time</li><li>No scent at all if that matters to you</li><li>Gets slightly thicker in cold rooms</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"Three years in, my eczema is calmer than it has ever been. I put this on twice a day and my skin actually just feels normal — not tight, not itchy, not flaky. That used to feel impossible."</p><p class="dyu-review-author">Jessica M. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"Switched to this after a heavily fragranced lotion gave me a full-body rash. Two weeks later the redness was gone. My dermatologist was not surprised. I was furious it took me this long to find it."</p><p class="dyu-review-author">David R. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> CeraVe earns the top-overall pick because the formula actually repairs the skin barrier rather than just temporarily coating it. Ceramides plus hyaluronic acid is a clinically sound combination, which is why dermatologists keep recommending it. It works for most skin types, costs less than most alternatives, and the 19 oz tub lasts a long time.</p></div>
+</div>
+</div>
+
+<div id="review-6">
+<span class="dyu-rank-badge">&#10024; Best for Radiant Skin</span>
+<h4>6. Vaseline Intensive Care Body Lotion Cocoa Radiant 3 count for Dry Skin, with Pure Cocoa Butter, 20.3 Oz</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B01HTJTV4U","asin_manual":"B01HTJTV4U","items":{"B01HTJTV4U":{"asin":"B01HTJTV4U","title":"Vaseline Intensive Care Body Lotion Cocoa Radiant 3 count for Dry Skin, with Pure Cocoa Butter, 20.3 Oz","url":"https://www.amazon.com/dp/B01HTJTV4U","image_url":"https://m.media-amazon.com/images/I/51SKPLFjVKL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>Three big bottles of Vaseline's cocoa radiant formula — pure cocoa butter, ultra-hydrating lipids, and a glow that develops over a couple of weeks.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#127831;&nbsp; Pure cocoa butter blended with ultra-hydrating lipids for visible radiance</li>
+<li>&#128176;&nbsp; 3-pack delivers about 60 oz total — months of daily use for most households</li>
+<li>&#128293;&nbsp; Sheen develops over two to three weeks of consistent use, not just a temporary shine</li>
+<li>&#127804;&nbsp; Classic Vaseline Intensive Care formula that has been refined for decades</li>
+<li>&#128138;&nbsp; 20.3 oz bottles with a pump-style cap, easier to grab than the original tubs</li>
+<li>&#128128;&nbsp; Skin tone evens out over time, especially on legs and post-summer dryness</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>3-pack pricing beats single-bottle drugstore equivalents</li><li>Real cocoa butter scent, warm and chocolatey</li><li>Visible glow effect on legs and arms</li><li>Long-lasting formula, holds up overnight</li><li>Solid value for households or gifting</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Strong cocoa scent that some find too sweet</li><li>Slightly heavier feel than newer gel formulas</li><li>3-pack is a commitment if you've never tried the scent</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"I rotate this with CeraVe and they do different jobs. CeraVe for repair, this one for the glow. After a month my legs actually photograph differently. The 3-pack lasts me about half a year."</p><p class="dyu-review-author">Tessa C. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"Bought it because I missed the cocoa scent from when I was a teenager. The smell is the same, the formula is better. My elbows and knees are noticeably softer two weeks in."</p><p class="dyu-review-author">Marcus W. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> Cocoa butter that actually delivers a visible glow rather than just a shine. The scent is divisive but iconic. The 3-pack price-per-ounce makes it the best value option on this list.</p></div>
+</div>
+</div>
+
+<div id="review-7">
+<span class="dyu-rank-badge">&#127807; Best for Sensitive Skin</span>
+<h4>7. Aveeno Daily Moisturizing Body Lotion, with Prebiotic Oat, Paraben Free, Fragrance Free, Non-Comedogenic, 18 FL OZ</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B001459IEE","asin_manual":"B001459IEE","items":{"B001459IEE":{"asin":"B001459IEE","title":"Aveeno Daily Moisturizing Body Lotion, with Prebiotic Oat, Paraben Free, Fragrance Free, Non-Comedogenic, 18 FL OZ","url":"https://www.amazon.com/dp/B001459IEE","image_url":"https://m.media-amazon.com/images/I/311GZAliEUL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>A fragrance-free, prebiotic-oat lotion that paediatricians and dermatologists have been quietly recommending for decades.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#127806;&nbsp; Prebiotic colloidal oat formula that calms reactive skin and supports the microbiome</li>
+<li>&#128683;&nbsp; Completely fragrance-free, paraben-free, non-comedogenic</li>
+<li>&#128138;&nbsp; 18 oz pump bottle — large enough for daily full-body use without monthly restocking</li>
+<li>&#128104;&#8205;&#9877;&#65039;&nbsp; Recommended by dermatologists and paediatricians for over 70 years</li>
+<li>&#128164;&nbsp; Light enough for daytime use, hydrating enough for night</li>
+<li>&#128172;&nbsp; 57,000+ Amazon reviews with a 4.8 average — one of the most trusted formulas on the platform</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Genuinely fragrance-free — no masking scent</li><li>Calms eczema flares within a couple of days</li><li>Pump bottle dispenses cleanly</li><li>Excellent value for the size</li><li>Safe for kids and adults both</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Plain experience if you like scented products</li><li>Texture is on the thinner side</li><li>Not enough for very dry skin in deep winter without layering</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"This is the only lotion my dermatologist would let me use during my pregnancy. I kept using it after. It is unfussy, it works, and it has never caused a reaction. That is rare."</p><p class="dyu-review-author">Hannah B. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"I keep one of these in every bathroom in the house. The kids use it, my husband uses it, I use it on my face when I run out of moisturiser. Boring is good when it comes to lotion."</p><p class="dyu-review-author">Yelena R. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> Quiet workhorse. The oat plus no-fragrance combination is exactly right for reactive skin, kids, or anyone tired of products that promise more than they deliver. Layer it under a heavier cream in winter if your skin is very dry.</p></div>
+</div>
+</div>
+
+<div id="review-8">
+<span class="dyu-rank-badge">&#128167; Best Gel Formula</span>
+<h4>8. Neutrogena Hydro Boost Body Moisturizing Gel Cream with Hyaluronic Acid, Non-Greasy & Fast Absorbing, Fragrance-Free, 16 oz</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B07DJPC8JB","asin_manual":"B07DJPC8JB","items":{"B07DJPC8JB":{"asin":"B07DJPC8JB","title":"Neutrogena Hydro Boost Body Moisturizing Gel Cream with Hyaluronic Acid, Non-Greasy & Fast Absorbing, Fragrance-Free, 16 oz","url":"https://www.amazon.com/dp/B07DJPC8JB","image_url":"https://m.media-amazon.com/images/I/31yWroLtuKL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>A gel-cream formula that disappears into the skin in seconds and delivers hyaluronic-acid hydration that lasts the whole day.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#128167;&nbsp; Hyaluronic acid pulls moisture into deeper skin layers, not just the surface</li>
+<li>&#9889;&nbsp; Gel-cream texture absorbs in under five seconds — clothes can go on right after</li>
+<li>&#127774;&nbsp; Layers cleanly under sunscreen and self-tanner without pilling</li>
+<li>&#128683;&nbsp; Fragrance-free formula — no overlap with perfume or scented body products</li>
+<li>&#9748;&#65039;&nbsp; Stays comfortable in summer humidity where richer creams feel suffocating</li>
+<li>&#128138;&nbsp; 16 oz pump bottle that lasts about two months with daily full-body use</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Sinks in faster than any cream on this list</li><li>Hyaluronic acid hydration that holds up all day</li><li>No greasy feel, no transfer to clothes</li><li>Great under sunscreen or makeup primers</li><li>Fragrance-free option for layering with perfume</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Not rich enough for very dry skin in winter</li><li>Hydration tops out around the 6–8 hour mark</li><li>Gel finish feels different — takes a few uses to adjust</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"This saved my summer. Every other lotion felt like a sweater on my arms by 11 a.m. — this disappears and my skin still feels hydrated through to the evening. Buying three more for the gym bag."</p><p class="dyu-review-author">Priya N. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"My skin is oily on top and dehydrated underneath, which made every lotion either too heavy or not enough. This is the first one that fixed both. The pump bottle is also way more hygienic than tubs."</p><p class="dyu-review-author">Erica J. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> Best gel-texture lotion you'll find on Amazon. Sinks in cleanly, hydrates without weight, and layers perfectly under sunscreen. Reach for something heavier in deep winter, but for most of the year this is hard to beat.</p></div>
+</div>
+</div>
+
+<div id="review-9">
+<span class="dyu-rank-badge">&#127851; Best Cocoa Butter</span>
+<h4>9. Palmer's Cocoa Butter Formula Daily Skin Therapy Cocoa Butter Body Lotion, Pump Bottle, 13.5 Oz</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B0009F3O8Q","asin_manual":"B0009F3O8Q","items":{"B0009F3O8Q":{"asin":"B0009F3O8Q","title":"Palmer's Cocoa Butter Formula Daily Skin Therapy Cocoa Butter Body Lotion, Pump Bottle, 13.5 Oz","url":"https://www.amazon.com/dp/B0009F3O8Q","image_url":"https://m.media-amazon.com/images/I/41pEyLXElSL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>The original cocoa butter lotion — real cocoa scent, decades of fans, and a pump bottle that makes daily use effortless.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#127831;&nbsp; Pure cocoa butter and vitamin E formula that has been refined since the 1970s</li>
+<li>&#128138;&nbsp; 13.5 oz pump bottle — easier to use than the classic tub format</li>
+<li>&#129331;&nbsp; The signature warm chocolate scent that millions grew up with</li>
+<li>&#128064;&nbsp; Helps fade old scars, stretch marks, and post-pregnancy uneven tone over weeks of use</li>
+<li>&#129528;&nbsp; Skin feels softer immediately, with deeper texture changes around the four-week mark</li>
+<li>&#128176;&nbsp; Drugstore pricing for a brand that competes with much pricier cocoa butter creams</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Real cocoa scent, no synthetic chocolate notes</li><li>Genuinely fades stretch marks with consistent use</li><li>Pump bottle is more hygienic than tubs</li><li>One of the cheapest lotions per ounce on this list</li><li>Reliable formula that hasn't changed for decades</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Strong cocoa scent — divisive</li><li>Heavier feel than gel lotions, slower absorption</li><li>Not ideal under perfume</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"Used this through both pregnancies. My stretch marks faded faster than they did with my first when I used a much pricier brand. The smell is comforting — it reminds me of my grandmother's bathroom shelf."</p><p class="dyu-review-author">Renata D. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"I have a long scar on my arm from a kitchen accident two years ago. Six weeks of nightly Palmer's and the scar is half the colour it was. Cheap, smells like dessert, and it works."</p><p class="dyu-review-author">Kim S. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> The cocoa butter lotion most people remember from childhood, still the best in the category. The scent is divisive but the formula genuinely fades stretch marks and uneven tone over time. Cheap, effective, and unchanged for a reason.</p></div>
+</div>
+</div>
+
+<div id="review-10">
+<span class="dyu-rank-badge">&#127802; Best New Formula</span>
+<h4>10. Saltair Body Lotion - 2 Pack Pink Beach Scented Hydrating Body Cream with Nourishing Moisturizer Formula, 2x 10oz</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B0BVPH918S","asin_manual":"B0BVPH918S","items":{"B0BVPH918S":{"asin":"B0BVPH918S","title":"Saltair Body Lotion - 2 Pack Pink Beach Scented Hydrating Body Cream with Nourishing Moisturizer Formula, 2x 10oz","url":"https://www.amazon.com/dp/B0BVPH918S","image_url":"https://m.media-amazon.com/images/I/41E3AwqPOcL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>Saltair's Pink Beach scent has gone viral on TikTok for good reason — a beachy floral lotion that hydrates without feeling like sunscreen.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#127796;&nbsp; Pink Beach signature scent — coconut, hibiscus, and a salt-air finish</li>
+<li>&#127803;&nbsp; Modern brand built on clean ingredients, vegan and cruelty-free</li>
+<li>&#128241;&nbsp; Viral on TikTok and Reels — a category leader for the under-30 audience</li>
+<li>&#129528;&nbsp; 2-pack of 10 oz tubes, ideal for travel and gym bags</li>
+<li>&#128167;&nbsp; Lightweight hydration that does not interfere with self-tan or perfume</li>
+<li>&#127803;&nbsp; Tube format prevents waste at the bottom — just squeeze it out</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Iconic, instantly recognisable scent</li><li>Lightweight feel, sinks in fast</li><li>Travel-friendly tube format</li><li>Looks great on a vanity</li><li>Genuinely vegan and clean-ingredient</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Scent is polarising — coconut + floral isn't for everyone</li><li>Tube format finishes faster than a 16 oz pump</li><li>Premium pricing per ounce vs drugstore options</li><li>Not heavy enough for very dry skin</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"I was sceptical of the TikTok hype but it deserved it. The Pink Beach scent is exactly what summer should smell like. I keep one tube on my nightstand and one in my gym bag."</p><p class="dyu-review-author">Olivia W. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"The scent lasts on my skin for around four hours, which is more than most lotions. I get compliments every time I wear it. Going to gift the second tube to my sister."</p><p class="dyu-review-author">Madison F. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> The viral lotion is actually good — the formula isn't an afterthought to the scent. Lightweight hydration with a coconut-floral signature that lasts hours. Worth it if you want a fragrance-forward lotion that feels modern.</p></div>
+</div>
+</div>
+
+<hr class="dyu-divider">
+
+<h4 id="faq">Frequently Asked Questions About Body Lotions</h4>
+
+<div class="dyu-faq-item">
+<p class="dyu-faq-q">Q1. What is the difference between a body lotion, body cream, and body butter?</p>
+<p>The short version: lotion is the lightest, cream sits in the middle, butter is the richest. Lotions are mostly water, absorb fast, and are great for daily use or warmer climates. Creams have more oil in the mix, which makes them better for genuinely dry or mature skin. Butters have almost no water at all &mdash; they are mostly oil and wax, which means deep and lasting moisture, but also a richer feel that not everyone loves in the morning.</p>
+</div>
+<div class="dyu-faq-item">
+<p class="dyu-faq-q">Q2. When is the best time to apply body lotion for maximum absorption?</p>
+<p>Right after a shower, while the skin is still slightly damp. The pores are open, the skin barrier is at its most receptive, and the lotion locks in the water that is already sitting on the surface rather than just adding more on top of dry skin. Pat yourself mostly dry rather than fully dry, then apply within two to three minutes. Night application is also excellent &mdash; skin repair is most active during sleep, so anything you put on before bed gets a longer window to work.</p>
+</div>
+<div class="dyu-faq-item">
+<p class="dyu-faq-q">Q3. Which ingredients should I look for in a body lotion for dry skin?</p>
+<p>Three things work best in combination: humectants (which draw water in), emollients (which soften and smooth), and occlusives (which seal everything in). For humectants, hyaluronic acid and glycerin are the strongest. For emollients, shea butter, cocoa butter, and ceramides all work well. For occlusives, dimethicone and petroleum-based ingredients form a seal over the skin. The CeraVe formula on this list is a textbook example of all three working together &mdash; which is part of why dermatologists keep recommending it.</p>
+</div>
+<div class="dyu-faq-item">
+<p class="dyu-faq-q">Q4. Can I use the same body lotion on my face?</p>
+<p>Some of them, yes. CeraVe Moisturizing Cream is specifically formulated to be safe on the face &mdash; it is fragrance-free, non-comedogenic, and the ceramide formula is gentle enough for facial skin. Most others on this list are body-only, especially anything with a strong fragrance or a heavier occlusive base. If you are going to try a body lotion on your face, patch test on the jawline or behind the ear first and wait 48 hours before using it all over.</p>
+</div>
+<div class="dyu-faq-item">
+<p class="dyu-faq-q">Q5. How long does it take for a body lotion to show results on dry skin?</p>
+<p>You will feel a difference on day one &mdash; softness and comfort are immediate. Visible improvement in rough texture or flaky patches usually takes about a week of consistent daily use. If you are using something with ceramides to repair the skin barrier, that deeper work takes four to six weeks to show meaningful results. The catch is consistency: using a lotion three times a week produces worse results than using a simpler lotion every single day.</p>
+</div>
+<div class="dyu-faq-item">
+<p class="dyu-faq-q">Q6. Are fragrance-free body lotions always better for sensitive skin?</p>
+<p>For most people with sensitive or reactive skin, yes &mdash; fragrance (synthetic and natural) is among the most common causes of contact dermatitis. But fragrance-free does not automatically mean reaction-free. Some people react to specific preservatives, emulsifiers, or plant extracts that have nothing to do with scent. The only way to know for sure is to patch test every new product on the inner wrist for 24 to 48 hours before applying it all over. And read the actual ingredient list, not the marketing claims &mdash; "unscented" sometimes means a fragrance masker has been added on top of another fragrance.</p>
+</div>
+
+<div class="dyu-helpful-box">
+  <p><strong>Found This Guide Helpful?</strong></p>
+  <p>Bookmark GlowPick for more independently researched beauty and skincare guides &mdash; we cover body care, skincare, haircare, and wellness, all without brand sponsorship or paid placements.</p>
+  <p>If this saved you from a lotion that wouldn't have worked, share it with someone who could use the same shortcut.</p>
+</div>
+
+<hr class="dyu-divider">
+
+<p style="text-align:center; font-family: Arial, sans-serif; font-size: 0.93em; color: #555;">Drop the lotion you can't live without in the comments &mdash; bonus points if it's one most people haven't heard of yet.</p>
+
+<!-- wp:post-comments-form /-->
+
+<!-- wp:comments /-->
+
+</div>
