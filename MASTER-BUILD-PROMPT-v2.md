@@ -165,8 +165,8 @@ Follow EVERY instruction below exactly. No deviations. No extra sections. No AI-
 .dyu-gold-block { border: none; padding: 4px 0; margin: 0.8em 0; }
 
 /* ===== PROS CONS ===== */
-.dyu-pros-cons { display: flex; gap: 14px; margin: 1em 0; flex-wrap: wrap; }
-.dyu-pros, .dyu-cons { flex: 1; min-width: 200px; background: #f8f8f8; border-radius: 6px; padding: 10px 14px; }
+.dyu-pros-cons { display: flex; flex-direction: column; gap: 14px; margin: 1em 0; }
+.dyu-pros, .dyu-cons { width: 100%; background: #f8f8f8; border-radius: 6px; padding: 10px 14px; }
 .dyu-pros { border-top: 3px solid #27ae60; }
 .dyu-cons { border-top: 3px solid #e74c3c; }
 .dyu-pros h6, .dyu-cons h6 { margin: 0 0 7px; font-family: Arial, sans-serif; font-size: 0.88em; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -195,7 +195,6 @@ Follow EVERY instruction below exactly. No deviations. No extra sections. No AI-
 .dyu-article { width: 100%; max-width: 860px; }
 @media (max-width: 580px) {
   .dyu-article { padding: 0 4px; }
-  .dyu-pros-cons { flex-direction: column; }
   .dyu-evidence-tooltip { width: min(280px, 90vw); right: 0; }
   .dyu-author-popup { min-width: min(220px, 80vw); max-width: min(280px, 85vw); }
   .dyu-table-wrapper { margin-left: -4px; margin-right: -4px; }
@@ -286,6 +285,17 @@ After every build, deliver these 3 files:
 ✅ table-only.html generated: full-width, no scroll, no scroll-hint
 ✅ faq-only.html generated: styled, all 6 FAQs
 ```
+
+---
+
+---
+
+## PROS/CONS RULES
+
+- Layout: Pros on TOP, Cons BELOW (stacked vertically, not side-by-side)
+- Pros: 4–5 bullet points per product
+- Cons: **MAXIMUM 1 bullet point per product** — pick the single most relevant downside only
+- CSS enforces vertical stack: `.dyu-pros-cons { flex-direction: column; }`
 
 ---
 
