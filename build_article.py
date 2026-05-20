@@ -709,7 +709,7 @@ def build_table():
         amazon_url = f'https://www.amazon.com/dp/{p["asin"]}?tag={TAG}'
         rows.append(f"""<tr>
   <td><strong>{p["n"]}</strong></td>
-  <td><img class="dyu-table-img" src="{p["image"]}" alt="{p["short"]}" loading="lazy"></td>
+  <td><a href="{amazon_url}" target="_blank" rel="nofollow sponsored noopener"><img class="dyu-table-img" src="{p["image"]}" alt="{p["short"]}" loading="lazy"></a></td>
   <td><strong>{p["short"]}</strong><br><small>{p["size_detail"]}</small></td>
   <td>{p["best_for"]}</td>
   <td>${p["price"]}</td>
@@ -813,6 +813,22 @@ def build_comment_prompt():
 # MAIN
 # ---------------------------------------------------------------------------
 def main():
+    # --- Point 4: Auto-rank products (Best Overall first, then by rating*reviews) ---
+    def sort_key(p):
+        # Best Overall always goes first
+        if "Best Overall" in p.get("badge", ""):
+            return (0, 0)
+        # Parse review_count (remove commas)
+        rc = int(p["review_count"].replace(",", ""))
+        rating = float(p["rating"])
+        # Higher score = better rank (negate for ascending sort)
+        return (1, -(rating * rc))
+
+    PRODUCTS.sort(key=sort_key)
+    # Renumber after sorting
+    for i, p in enumerate(PRODUCTS, 1):
+        p["n"] = i
+
     parts = []
     parts.append(f"<!-- DelightfulYou.com | {TOPIC} {YEAR} | tag: {TAG} -->")
     parts.append(f"<style>{CSS}</style>")

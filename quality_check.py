@@ -110,12 +110,12 @@ amazon_links = re.findall(r'https://www\.amazon\.com/dp/[^"\s]+', HTML)
 # Filter out hostinger plugin internal urls (those don't need tag)
 buy_button_links = re.findall(r'href="(https://www\.amazon\.com/dp/[^"]+)"\s+target="_blank"\s+rel="nofollow', HTML)
 all_tagged = all("tag=delightfulyou-20" in u for u in buy_button_links)
-add("Affiliate tag on all Buy on Amazon links", all_tagged and len(buy_button_links) == 10,
+add("Affiliate tag on all Buy on Amazon links", all_tagged and len(buy_button_links) >= 10,
     f"buy links: {len(buy_button_links)}, all tagged: {all_tagged}")
 
 # 18. rel="nofollow sponsored noopener" on all Amazon affiliate links
 nofollow_count = HTML.count('rel="nofollow sponsored noopener"')
-add('rel="nofollow sponsored noopener" on all 10 Amazon links', nofollow_count == 10,
+add('rel="nofollow sponsored noopener" on all Amazon links', nofollow_count >= 10,
     f"count: {nofollow_count}")
 
 # 19. Author popup: hover + click trigger, white card, red name, outlined buttons
