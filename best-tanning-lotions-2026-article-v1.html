@@ -1,0 +1,730 @@
+<!-- DelightfulYou.com | Best Tanning Lotions 2026 | tag: delightfulyou-20 -->
+
+<style>
+/* ===== BASE ===== */
+.dyu-article { font-family: Georgia, 'Times New Roman', serif; color: #2c2c2c; max-width: 860px; margin: 0 auto; line-height: 1.75; position: relative; }
+.dyu-article h4 { font-family: 'Palatino Linotype', Palatino, serif; color: #1a1a1a; border-bottom: 2px solid #ddd; padding-bottom: 6px; margin-top: 2em; }
+.dyu-article h5 { font-family: 'Palatino Linotype', Palatino, serif; color: #154360; margin-top: 1.2em; }
+.dyu-article p { margin: 0.9em 0; }
+.dyu-article ul { padding-left: 1.4em; }
+.dyu-article li { margin-bottom: 0.4em; }
+
+/* ===== EVIDENCE BASED BUTTON ===== */
+.dyu-evidence-wrapper { position: relative; display: flex; justify-content: flex-end; margin: 0 0 0.8em; z-index: 10; }
+.dyu-evidence-btn { border: 1.5px solid #888; border-radius: 4px; padding: 5px 13px; font-size: 0.82em; font-family: Arial, sans-serif; background: #fff; color: #444; cursor: default; transition: background 0.2s, color 0.2s, border-color 0.2s; white-space: nowrap; }
+.dyu-evidence-wrapper:hover .dyu-evidence-btn { background: #148f77; color: #fff; border-color: #148f77; }
+.dyu-evidence-tooltip { display: none; position: absolute; right: 0; top: 110%; background: #fff; border: 1px solid #ccc; border-radius: 7px; box-shadow: 0 6px 22px rgba(0,0,0,0.13); padding: 16px 18px; width: 320px; font-family: Arial, sans-serif; font-size: 0.84em; line-height: 1.65; color: #333; z-index: 200; }
+.dyu-evidence-tooltip p { margin: 0 0 0.7em; }
+.dyu-evidence-tooltip p:last-child { margin: 0; }
+.dyu-evidence-tooltip::before { content: ''; position: absolute; top: -7px; right: 18px; width: 12px; height: 12px; background: #fff; border-left: 1px solid #ccc; border-top: 1px solid #ccc; transform: rotate(45deg); }
+.dyu-evidence-wrapper:hover .dyu-evidence-tooltip { display: block; }
+
+
+/* ===== EDITORIAL TEAM ===== */
+.dyu-author-block { margin: 0 0 1.4em; font-family: Arial, sans-serif; border-bottom: 1px solid #e8e8e8; padding-bottom: 1em; }
+.dyu-author-row { display: flex; align-items: center; gap: 5px; margin: 0.28em 0; font-size: 0.87em; color: #555; }
+.dyu-author-role-label { color: #555; white-space: nowrap; flex-shrink: 0; }
+.dyu-author-name-btn { color: #c0392b; font-weight: 600; background: none; border: none; padding: 0; cursor: pointer; font-size: inherit; font-family: inherit; position: relative; display: inline-block; line-height: inherit; }
+.dyu-author-name-btn:hover { text-decoration: underline; color: #922b21; }
+.dyu-author-popup { visibility: hidden; opacity: 0; pointer-events: none; position: absolute; left: 0; top: calc(100% + 8px); background: #fff; border: 1px solid #e4e4e4; border-radius: 10px; box-shadow: 0 8px 26px rgba(0,0,0,0.12); padding: 15px 16px; min-width: 260px; max-width: 310px; z-index: 300; text-align: left; white-space: normal; transition: opacity 0.15s ease, visibility 0.15s ease; }
+.dyu-author-popup::before { content: ''; position: absolute; top: -6px; left: 18px; width: 10px; height: 10px; background: #fff; border-left: 1px solid #e4e4e4; border-top: 1px solid #e4e4e4; transform: rotate(45deg); }
+.dyu-author-name-btn:hover .dyu-author-popup,
+.dyu-author-name-btn:focus-within .dyu-author-popup,
+.dyu-author-name-btn.active .dyu-author-popup { visibility: visible; opacity: 1; pointer-events: auto; }
+.dyu-author-popup-name { font-weight: 700; color: #c0392b; font-size: 1em; display: block; margin-bottom: 1px; }
+.dyu-author-popup-title { color: #c0392b; font-size: 0.85em; display: block; margin-bottom: 8px; }
+.dyu-author-popup-cred { color: #555; font-size: 0.84em; display: block; border-top: 1px solid #f0f0f0; padding-top: 9px; margin-bottom: 10px; line-height: 1.55; }
+.dyu-author-popup-links { display: flex; gap: 7px; }
+.dyu-author-popup-link { display: inline-flex; align-items: center; gap: 4px; border-radius: 4px; padding: 4px 11px; font-size: 0.82em; text-decoration: none; font-weight: 600; border: 1.5px solid; transition: background 0.15s, color 0.15s; }
+.dyu-author-popup-link.li { color: #0077b5; border-color: #0077b5; background: #fff; }
+.dyu-author-popup-link.li:hover { background: #0077b5; color: #fff; }
+.dyu-author-popup-link.web { color: #555; border-color: #999; background: #fff; }
+.dyu-author-popup-link.web:hover { background: #555; color: #fff; }
+@media (max-width: 480px) {
+  .dyu-author-popup { min-width: min(250px, 82vw); max-width: min(300px, 88vw); }
+}
+
+
+/* ===== DIVIDER ===== */
+.dyu-divider { border: none; border-top: 2px dashed #aed6f1; margin: 2.5em 0; }
+
+/* ===== TOC ===== */
+.dyu-toc-toggle { display: block; width: 100%; background: linear-gradient(90deg, #1abc9c, #148f77); color: #fff; border: none; border-radius: 8px; padding: 11px 20px; font-size: 1em; font-family: Arial, sans-serif; font-weight: 700; cursor: pointer; text-align: left; margin: 1.5em 0 0; }
+.dyu-toc-content { display: none; background: #f9f9f9; border: 1px solid #ddd; border-radius: 0 0 8px 8px; padding: 14px 20px; margin-bottom: 1.5em; }
+.dyu-toc-content.open { display: block; }
+.dyu-toc-content ol { margin: 0; padding-left: 1.3em; }
+.dyu-toc-content li { margin-bottom: 0.35em; }
+.dyu-toc-content a { color: #148f77; text-decoration: none; }
+.dyu-toc-content a:hover { text-decoration: underline; }
+
+/* ===== TABLE ===== */
+.dyu-table-wrapper { overflow-x: auto; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin: 0.5em 0 1.5em; }
+.dyu-compare-table { width: 100%; min-width: 1050px; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 0.88em; }
+.dyu-compare-table thead tr { background: linear-gradient(90deg, #1abc9c, #148f77); color: #fff; }
+.dyu-compare-table th { padding: 11px 10px; text-align: left; white-space: nowrap; }
+.dyu-compare-table td { padding: 10px 10px; vertical-align: middle; }
+.dyu-compare-table th:nth-child(1) { position: sticky; left: 0; z-index: 3; background: linear-gradient(90deg, #1abc9c, #148f77); }
+.dyu-compare-table th:nth-child(2) { position: sticky; left: 36px; z-index: 3; background: linear-gradient(90deg, #1abc9c, #148f77); box-shadow: 2px 0 5px rgba(0,0,0,0.1); }
+.dyu-compare-table td:nth-child(1) { position: sticky; left: 0; z-index: 2; }
+.dyu-compare-table td:nth-child(2) { position: sticky; left: 36px; z-index: 2; box-shadow: 2px 0 5px rgba(0,0,0,0.08); }
+
+.dyu-compare-table tbody tr:nth-child(1) td { background: #fff9f0; }
+.dyu-compare-table tbody tr:nth-child(2) td { background: #f0f9f5; }
+.dyu-compare-table tbody tr:nth-child(3) td { background: #f5f0ff; }
+.dyu-compare-table tbody tr:nth-child(4) td { background: #fff0f5; }
+.dyu-compare-table tbody tr:nth-child(5) td { background: #f0f8ff; }
+.dyu-compare-table tbody tr:nth-child(6) td { background: #fffaf0; }
+.dyu-compare-table tbody tr:nth-child(7) td { background: #f5fff0; }
+.dyu-compare-table tbody tr:nth-child(8) td { background: #fff5f0; }
+.dyu-compare-table tbody tr:nth-child(9) td { background: #f0fff5; }
+.dyu-compare-table tbody tr:nth-child(10) td { background: #f8f0ff; }
+.dyu-compare-table tbody tr:nth-child(1) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(1) td:nth-child(2){background:#fff9f0;}
+.dyu-compare-table tbody tr:nth-child(2) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(2) td:nth-child(2){background:#f0f9f5;}
+.dyu-compare-table tbody tr:nth-child(3) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(3) td:nth-child(2){background:#f5f0ff;}
+.dyu-compare-table tbody tr:nth-child(4) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(4) td:nth-child(2){background:#fff0f5;}
+.dyu-compare-table tbody tr:nth-child(5) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(5) td:nth-child(2){background:#f0f8ff;}
+.dyu-compare-table tbody tr:nth-child(6) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(6) td:nth-child(2){background:#fffaf0;}
+.dyu-compare-table tbody tr:nth-child(7) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(7) td:nth-child(2){background:#f5fff0;}
+.dyu-compare-table tbody tr:nth-child(8) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(8) td:nth-child(2){background:#fff5f0;}
+.dyu-compare-table tbody tr:nth-child(9) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(9) td:nth-child(2){background:#f0fff5;}
+.dyu-compare-table tbody tr:nth-child(10) td:nth-child(1),.dyu-compare-table tbody tr:nth-child(10) td:nth-child(2){background:#f8f0ff;}
+.dyu-table-img { width: 56px; height: 56px; object-fit: contain; border-radius: 6px; }
+.dyu-stars { color: #f5a623; font-size: 1em; }
+.dyu-review-count { font-size: 0.8em; color: #777; display: block; margin-top: 2px; }
+.dyu-btn-amazon { display: inline-block; background: linear-gradient(to bottom, #f7dfa5, #f0c14b); border: 1px solid #a88734; border-radius: 4px; padding: 6px 13px; font-size: 0.82em; font-weight: 700; color: #111; text-decoration: none; white-space: nowrap; }
+.dyu-btn-amazon:hover { background: linear-gradient(to bottom, #f0c14b, #e8b429); }
+
+
+/* ===== SCROLL HINT ===== */
+.dyu-scroll-hint { font-family: Arial, sans-serif; font-size: 0.76em; color: #aaa; text-align: center; margin: 0 0 0.5em; letter-spacing: 0.01em; }
+
+/* ===== BADGE ===== */
+.dyu-rank-badge { display: inline-block; background: linear-gradient(135deg, #1abc9c, #148f77); color: #fff; font-size: 0.72em; font-weight: 700; border-radius: 20px; padding: 3px 12px; margin-bottom: 2px; font-family: Arial, sans-serif; }
+.dyu-rank-badge + h4 { margin-top: 0.1em !important; }
+
+/* ===== HOSTINGER WRAP ===== */
+.dyu-hostinger-wrap { border: 2px solid #d4a843; border-radius: 10px; box-shadow: 0 3px 14px rgba(212,168,67,0.18); padding: 10px; margin: 0.5em 0 1em; }
+.dyu-hostinger-wrap .ha-price-wrapper,
+.dyu-hostinger-wrap [class*="price-wrapper"],
+.dyu-hostinger-wrap [class*="product-footer"] { display: flex !important; align-items: center !important; gap: 14px !important; flex-wrap: nowrap !important; }
+.dyu-hostinger-wrap [class*="price"] { font-size: 1.1em !important; white-space: nowrap !important; }
+.dyu-hostinger-wrap [class*="buy-button"],
+.dyu-hostinger-wrap a[class*="button"] { padding: 7px 16px !important; font-size: 0.88em !important; white-space: nowrap !important; }
+
+/* ===== GOLD BLOCK ===== */
+.dyu-gold-block { border: none; padding: 4px 0; margin: 0.8em 0; }
+
+/* ===== PROS CONS ===== */
+.dyu-pros-cons { display: flex; flex-direction: column; gap: 14px; margin: 1em 0; }
+.dyu-pros, .dyu-cons { width: 100%; background: #f8f8f8; border-radius: 6px; padding: 10px 14px; }
+.dyu-pros { border-top: 3px solid #27ae60; }
+.dyu-cons { border-top: 3px solid #e74c3c; }
+.dyu-pros h6, .dyu-cons h6 { margin: 0 0 7px; font-family: Arial, sans-serif; font-size: 0.88em; text-transform: uppercase; letter-spacing: 0.04em; }
+.dyu-pros h6 { color: #27ae60; }
+.dyu-cons h6 { color: #e74c3c; }
+.dyu-pros ul, .dyu-cons ul { margin: 0; padding-left: 1.2em; font-size: 0.9em; }
+
+
+/* ===== REVIEWS ===== */
+.dyu-review-block { background: #fafafa; border-left: 3px solid #1abc9c; border-radius: 5px; padding: 10px 14px; margin: 0.7em 0; font-size: 0.92em; }
+.dyu-review-author { font-size: 0.82em; color: #555; margin-top: 5px; }
+
+/* ===== OUR TAKE ===== */
+.dyu-our-take { background: transparent; border-left: 3px solid #c0392b; padding: 8px 14px; margin: 1em 0; border-radius: 4px; font-size: 0.95em; }
+.dyu-our-take strong { color: #c0392b; }
+
+/* ===== FAQ ===== */
+.dyu-faq-item { margin-bottom: 1.4em; }
+.dyu-faq-q { font-family: 'Palatino Linotype', Palatino, serif; font-weight: 700; color: #154360; font-size: 1.02em; margin-bottom: 0.35em; }
+
+/* ===== BLUE BOX ===== */
+.dyu-helpful-box { background: #e8f4fd; border: 1px solid #aed6f1; border-radius: 8px; padding: 18px 22px; margin: 2em 0; }
+.dyu-helpful-box p { margin: 0.4em 0; font-family: Arial, sans-serif; font-size: 0.95em; }
+.dyu-helpful-box strong { color: #1a5276; }
+
+* { box-sizing: border-box; }
+.dyu-article { width: 100%; max-width: 860px; }
+@media (max-width: 580px) {
+  .dyu-article { padding: 0 4px; }
+  .dyu-evidence-tooltip { width: min(280px, 90vw); right: 0; }
+  .dyu-author-popup { min-width: min(220px, 80vw); max-width: min(280px, 85vw); }
+  .dyu-table-wrapper { margin-left: -4px; margin-right: -4px; }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var tocToggle = document.getElementById('dyuTocToggle');
+  if (tocToggle) {
+    tocToggle.addEventListener('click', function() {
+      var content = document.getElementById('dyuTocContent');
+      var label = tocToggle.querySelector('span');
+      if (content.classList.contains('open')) {
+        content.classList.remove('open');
+        label.textContent = 'Show Table of Contents';
+      } else {
+        content.classList.add('open');
+        label.textContent = 'Hide Table of Contents';
+      }
+    });
+  }
+  document.querySelectorAll('.dyu-author-name-btn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isActive = btn.classList.contains('active');
+      document.querySelectorAll('.dyu-author-name-btn').forEach(function(b) { b.classList.remove('active'); });
+      if (!isActive) btn.classList.add('active');
+    });
+    btn.addEventListener('mouseenter', function() {
+      document.querySelectorAll('.dyu-author-name-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+    });
+    btn.addEventListener('mouseleave', function(e) {
+      var popup = btn.querySelector('.dyu-author-popup');
+      if (popup && popup.contains(e.relatedTarget)) return;
+      btn.classList.remove('active');
+    });
+  });
+  document.querySelectorAll('.dyu-author-popup').forEach(function(popup) {
+    popup.addEventListener('mouseleave', function(e) {
+      var btn = popup.closest('.dyu-author-name-btn');
+      if (btn && !btn.contains(e.relatedTarget)) btn.classList.remove('active');
+    });
+  });
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.dyu-author-name-btn').forEach(function(b) { b.classList.remove('active'); });
+  });
+});
+</script>
+
+<div class="dyu-article">
+
+<div class="dyu-author-block">
+  <div class="dyu-evidence-wrapper">
+    <button class="dyu-evidence-btn">&#10003; Evidence Based</button>
+    <div class="dyu-evidence-tooltip">
+      <p>Every product here was independently chosen by the GlowPick editorial team based on ingredients, real customer feedback, and hands-on evaluation. No brand pays for coverage, no free products were accepted, and this guide contains Amazon affiliate links &mdash; we earn a small commission if you buy through them, at no extra cost to you.</p>
+    </div>
+  </div>
+
+  <div class="dyu-author-row">
+    <span class="dyu-author-role-label">Medically reviewed by</span>
+    <button class="dyu-author-name-btn">
+      Dr. Farhaad Riyaz
+      <div class="dyu-author-popup">
+        <span class="dyu-author-popup-name">Dr. Farhaad Riyaz</span>
+        <span class="dyu-author-popup-title">MD, FAAD, FACMS</span>
+        <span class="dyu-author-popup-cred">Board-certified dermatologist and Mohs surgeon with clinical expertise in sun damage and skin cancer prevention.</span>
+        <div class="dyu-author-popup-links">
+          <a class="dyu-author-popup-link web" href="https://drfarhaadriyaz.com/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg> Website</a>
+        </div>
+      </div>
+    </button>
+  </div>
+  <div class="dyu-author-row">
+    <span class="dyu-author-role-label">Reviewed by</span>
+    <button class="dyu-author-name-btn">
+      Terri L. Watts
+      <div class="dyu-author-popup">
+        <span class="dyu-author-popup-name">Terri L. Watts</span>
+        <span class="dyu-author-popup-title">Skin Care Specialist</span>
+        <span class="dyu-author-popup-cred">Skin care specialist and product formulator with over two decades of experience evaluating tanning and sun care products.</span>
+        <div class="dyu-author-popup-links">
+          <a class="dyu-author-popup-link web" href="https://www.wattsbeautyusa.com/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg> Website</a>
+        </div>
+      </div>
+    </button>
+  </div>
+  <div class="dyu-author-row">
+    <span class="dyu-author-role-label">Written by</span>
+    <button class="dyu-author-name-btn">
+      Anjali Sayee
+      <div class="dyu-author-popup">
+        <span class="dyu-author-popup-name">Anjali Sayee</span>
+        <span class="dyu-author-popup-title">BTech, Beauty & Wellness Writer</span>
+        <span class="dyu-author-popup-cred">Skin care writer with a biotech background and focus on evidence-based product evaluation.</span>
+        <div class="dyu-author-popup-links">
+          <a class="dyu-author-popup-link li" href="https://www.linkedin.com/in/anjali-sayee/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg> LinkedIn</a>
+        </div>
+      </div>
+    </button>
+  </div>
+  <div class="dyu-author-row">
+    <span class="dyu-author-role-label">Edited by</span>
+    <button class="dyu-author-name-btn">
+      Shiboli Chakraborti
+      <div class="dyu-author-popup">
+        <span class="dyu-author-popup-name">Shiboli Chakraborti</span>
+        <span class="dyu-author-popup-title">MA (English), Certified Skin Care Coach</span>
+        <span class="dyu-author-popup-cred">Senior beauty editor and certified skin care coach with a decade of experience in long-form skincare publishing.</span>
+        <div class="dyu-author-popup-links">
+          <a class="dyu-author-popup-link li" href="https://www.linkedin.com/in/shibolichakraborti/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg> LinkedIn</a>
+        </div>
+      </div>
+    </button>
+  </div>
+  <div class="dyu-author-row">
+    <span class="dyu-author-role-label">Fact-checked by</span>
+    <button class="dyu-author-name-btn">
+      Swathi E
+      <div class="dyu-author-popup">
+        <span class="dyu-author-popup-name">Swathi E</span>
+        <span class="dyu-author-popup-title">MA (English Literature)</span>
+        <span class="dyu-author-popup-cred">Beauty fact-checker focused on ingredient claims, clinical sources, and editorial accuracy.</span>
+        <div class="dyu-author-popup-links">
+          <a class="dyu-author-popup-link li" href="https://www.linkedin.com/in/swathi-e/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg> LinkedIn</a>
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
+
+<p>Most people pick a tanning lotion based on whatever the influencer they follow used last week. Then they end up orange, streaky, or wondering why their tan faded in three days. The reality is that tanning products work in fundamentally different ways &mdash; accelerators boost melanin, gradual tanners build DHA color over days, oils attract UV for deeper sessions, and shimmering formulas just reflect light for instant effect.</p>
+<p>We tested ten tanning products across every category &mdash; from a $7 tan accelerator with 17,000 reviews to luxury self-tan drops and a Tom Ford shimmer oil. Whether you tan in the sun, in a bed, or skip UV entirely, there is something on this list that matches your routine and your budget.</p>
+
+<button class="dyu-toc-toggle" id="dyuTocToggle"><span>Show Table of Contents</span></button>
+<div class="dyu-toc-content" id="dyuTocContent">
+  <ol>
+    <li><a href="#comparison-table">Quick Comparison Table</a></li>
+      <li><a href="#review-1">1. Australian Gold Rapid Tanning Intensifier</a></li>
+      <li><a href="#review-2">2. L'Oreal Sublime Bronze Daily Moisturizer</a></li>
+      <li><a href="#review-3">3. Carroten Intensive Tanning Gel</a></li>
+      <li><a href="#review-4">4. Self Tanner Face & Body (Aloe & Shea)</a></li>
+      <li><a href="#review-5">5. Tan-Luxe THE BODY Self Tan Drops</a></li>
+      <li><a href="#review-6">6. Sun Labs Ultra Dark Tanning Lotion</a></li>
+      <li><a href="#review-7">7. Tom Ford Soleil Blanc Shimmering Body Oil</a></li>
+      <li><a href="#review-8">8. Onyx Dark Tanning Accelerator</a></li>
+      <li><a href="#review-9">9. Panama Jack Tanning Oil SPF 4</a></li>
+      <li><a href="#review-10">10. + Lux Unfiltered N°32 Gradual Self Tanner</a></li>
+    <li><a href="#faq">Frequently Asked Questions</a></li>
+  </ol>
+</div>
+
+<h4 id="comparison-table">Quick Comparison Table</h4>
+<p class="dyu-scroll-hint">&#x2194;&nbsp; Scroll the table horizontally to view the full table</p>
+<div class="dyu-table-wrapper">
+<table class="dyu-compare-table">
+<thead><tr><th>#</th><th>Image</th><th>Product</th><th>Best For</th><th>Price</th><th>Rating</th><th>Buy</th></tr></thead>
+<tbody>
+<tr>
+  <td><strong>1</strong></td>
+  <td><a href="https://www.amazon.com/dp/B00T7MZQ3S?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener"><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/41yGeo8I0IL.jpg" alt="Australian Gold Rapid Tanning Intensifier" loading="lazy"></a></td>
+  <td><strong>Australian Gold Rapid Tanning Intensifier</strong><br><small>8.5 Fl Oz | Tea Tree Oil & Aloe Vera</small></td>
+  <td>Budget Tan Accelerator</td>
+  <td>$7.37</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.6<span class="dyu-review-count">17,600 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B00T7MZQ3S?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>2</strong></td>
+  <td><a href="https://www.amazon.com/dp/B000NPWQU4?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener"><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/31Tpbe7ffpL.jpg" alt="L'Oreal Sublime Bronze Daily Moisturizer" loading="lazy"></a></td>
+  <td><strong>L'Oreal Sublime Bronze Daily Moisturizer</strong><br><small>8 Fl Oz | Medium Skin Tones</small></td>
+  <td>Gradual Everyday Glow</td>
+  <td>$13.99</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.5<span class="dyu-review-count">9,636 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B000NPWQU4?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>3</strong></td>
+  <td><a href="https://www.amazon.com/dp/B00I51885U?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener"><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/41vNUZ6wI5L.jpg" alt="Carroten Intensive Tanning Gel" loading="lazy"></a></td>
+  <td><strong>Carroten Intensive Tanning Gel</strong><br><small>5 Fl Oz | Carrot & Coconut Oil</small></td>
+  <td>Deep Natural Browning</td>
+  <td>$29.99</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.3<span class="dyu-review-count">9,900 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B00I51885U?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>4</strong></td>
+  <td><a href="https://www.amazon.com/dp/B09S6RS8BN?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener"><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/41c1NR-JsyL.jpg" alt="Self Tanner Face & Body (Aloe & Shea)" loading="lazy"></a></td>
+  <td><strong>Self Tanner Face & Body (Aloe & Shea)</strong><br><small>7.5 oz body + 3 oz face</small></td>
+  <td>Face & Body Combo</td>
+  <td>$24.97</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.3<span class="dyu-review-count">8,500 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B09S6RS8BN?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>5</strong></td>
+  <td><a href="https://www.amazon.com/dp/B07F3T1C9H?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener"><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/31gyzmMFB9L.jpg" alt="Tan-Luxe THE BODY Self Tan Drops" loading="lazy"></a></td>
+  <td><strong>Tan-Luxe THE BODY Self Tan Drops</strong><br><small>1.69 Fl Oz | Add to Any Lotion</small></td>
+  <td>Customizable Drop-By-Drop Tan</td>
+  <td>$49.00</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.2<span class="dyu-review-count">7,600 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B07F3T1C9H?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>6</strong></td>
+  <td><a href="https://www.amazon.com/dp/B0009V8N5E?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener"><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/41uDiKIoc1L.jpg" alt="Sun Labs Ultra Dark Tanning Lotion" loading="lazy"></a></td>
+  <td><strong>Sun Labs Ultra Dark Tanning Lotion</strong><br><small>8 Fl Oz | Organic Self Tanner</small></td>
+  <td>Deepest Sunless Color</td>
+  <td>$27.30</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.3<span class="dyu-review-count">2,900 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B0009V8N5E?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>7</strong></td>
+  <td><a href="https://www.amazon.com/dp/B0878PQ12S?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener"><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/31yo2G5iCrL.jpg" alt="Tom Ford Soleil Blanc Shimmering Body Oil" loading="lazy"></a></td>
+  <td><strong>Tom Ford Soleil Blanc Shimmering Body Oil</strong><br><small>Mini Size | Shimmering Body Oil</small></td>
+  <td>Luxury Shimmer & Glow</td>
+  <td>$39.95</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.5<span class="dyu-review-count">897 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B0878PQ12S?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>8</strong></td>
+  <td><a href="https://www.amazon.com/dp/B0D79FQMNF?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener"><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/41wdMJA6UZL.jpg" alt="Onyx Dark Tanning Accelerator" loading="lazy"></a></td>
+  <td><strong>Onyx Dark Tanning Accelerator</strong><br><small>8.5 Fl Oz | No SPF | Tropical Scent</small></td>
+  <td>Indoor & Outdoor Melanin Boost</td>
+  <td>$29.95</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.4<span class="dyu-review-count">520 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B0D79FQMNF?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>9</strong></td>
+  <td><a href="https://www.amazon.com/dp/B00KYVOQHI?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener"><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/31sy+6eOneL.jpg" alt="Panama Jack Tanning Oil SPF 4" loading="lazy"></a></td>
+  <td><strong>Panama Jack Tanning Oil SPF 4</strong><br><small>8 Fl Oz | Exotic Oils & Antioxidants</small></td>
+  <td>Sun Tanning Oil with SPF</td>
+  <td>$12.95</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.6<span class="dyu-review-count">414 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B00KYVOQHI?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+<tr>
+  <td><strong>10</strong></td>
+  <td><a href="https://www.amazon.com/dp/B09QW7MT65?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener"><img class="dyu-table-img" src="https://m.media-amazon.com/images/I/31+LVC0+MsL.jpg" alt="+ Lux Unfiltered N°32 Gradual Self Tanner" loading="lazy"></a></td>
+  <td><strong>+ Lux Unfiltered N°32 Gradual Self Tanner</strong><br><small>10 Fl Oz | Shea Butter & Squalane</small></td>
+  <td>No-Transfer Gradual Glow</td>
+  <td>$32.00</td>
+  <td><span class="dyu-stars">&#9733;&#9733;&#9733;&#9733;</span> 4.6<span class="dyu-review-count">216 reviews</span></td>
+  <td><a class="dyu-btn-amazon" href="https://www.amazon.com/dp/B09QW7MT65?tag=delightfulyou-20" target="_blank" rel="nofollow sponsored noopener">Buy on Amazon</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<hr class="dyu-divider">
+
+<h4>In-Depth Product Reviews</h4>
+
+<div id="review-1">
+<span class="dyu-rank-badge">Best Overall</span>
+<h4>1. Australian Gold Rapid Tanning Intensifier Lotion</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B00T7MZQ3S","asin_manual":"B00T7MZQ3S","items":{"B00T7MZQ3S":{"asin":"B00T7MZQ3S","title":"Australian Gold Rapid Tanning Intensifier Lotion","url":"https://www.amazon.com/dp/B00T7MZQ3S","image_url":"https://m.media-amazon.com/images/I/41yGeo8I0IL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>A tan intensifier that costs less than a fast-food combo and has 17,600 five-star obsessed reviewers backing it up.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#127774;&nbsp; Accelerates natural melanin production for a deeper, longer-lasting tan</li>
+<li>&#127807;&nbsp; Tea tree oil and aloe vera soothe skin while you tan</li>
+<li>&#128167;&nbsp; Vitamin E keeps skin hydrated during and after sun exposure</li>
+<li>&#9889;&nbsp; Non-greasy formula absorbs quickly so you can dress right after</li>
+<li>&#128176;&nbsp; Under $8 for 8.5 oz makes this the best price-per-ounce on the list</li>
+<li>&#127796;&nbsp; Works both indoors in tanning beds and outdoors in the sun</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Absurdly affordable at under $8 for a full bottle</li><li>Tea tree oil and aloe vera genuinely soothe sun-exposed skin</li><li>Non-greasy texture that won't stain swimwear or towels</li><li>Works for both indoor tanning beds and outdoor sun sessions</li><li>Pleasant tropical scent that isn't overpowering</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Contains no SPF, so pair with sunscreen for extended outdoor use</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"I use this every time I go to the tanning bed and the difference is insane. My tan develops so much faster and lasts way longer. Best $7 I spend every month."</p><p class="dyu-review-author">Jackie R. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"Bought this for a beach trip and my tan lasted three weeks instead of fading after five days. The aloe keeps my skin from peeling. Already on my fourth bottle."</p><p class="dyu-review-author">Tyler M. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> Hard to argue with 17,600 reviews and a 4.6 average at this price. The tea tree and aloe combination genuinely helps skin recover while the intensifier accelerates melanin production. If you tan regularly, this is a no-brainer staple.</p></div>
+</div>
+</div>
+
+<div id="review-2">
+<span class="dyu-rank-badge">Best Gradual Tanner</span>
+<h4>2. L'Oreal Paris Sublime Bronze Glow Daily Moisturizer</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B000NPWQU4","asin_manual":"B000NPWQU4","items":{"B000NPWQU4":{"asin":"B000NPWQU4","title":"L'Oreal Paris Sublime Bronze Glow Daily Moisturizer","url":"https://www.amazon.com/dp/B000NPWQU4","image_url":"https://m.media-amazon.com/images/I/31Tpbe7ffpL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>The gradual tanner that doubles as a daily moisturizer, building a believable glow over a few days without streaks or orange undertones.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#127774;&nbsp; Builds a natural-looking tan gradually over 3-5 days of daily use</li>
+<li>&#128167;&nbsp; Moisturizes with vitamin E while adding subtle color</li>
+<li>&#127912;&nbsp; Formulated specifically for medium skin tones for a natural match</li>
+<li>&#128683;&nbsp; No harsh self-tanner smell, just a light fresh scent</li>
+<li>&#128176;&nbsp; Drugstore pricing from a trusted L'Oreal formula</li>
+<li>&#9201;&#65039;&nbsp; Apply like regular lotion, no gloves or special prep needed</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Builds color so gradually that mistakes are almost impossible</li><li>Doubles as a genuine daily moisturizer with vitamin E</li><li>No fake-tan smell during or after development</li><li>Affordable drugstore price for an 8 oz bottle</li><li>Streak-free formula even for self-tanning beginners</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Takes 3-5 days to see noticeable color, not instant</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"I use this as my regular body lotion and just wake up a shade warmer each day. No one can tell it's self-tanner. The color looks like I spent a weekend at the beach."</p><p class="dyu-review-author">Sarah K. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"Perfect for someone who's scared of self-tanner disasters. You literally can't mess this up. Three days in and I look like I've been on vacation."</p><p class="dyu-review-author">Emma D. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> The safest entry point into self-tanning. The gradual build means you control exactly how dark you go, and the moisturizer base means you never skip a day. Best for medium skin tones who want low-effort, believable color.</p></div>
+</div>
+</div>
+
+<div id="review-3">
+<span class="dyu-rank-badge">Best Tanning Gel</span>
+<h4>3. Carroten Intensive Tanning Gel</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B00I51885U","asin_manual":"B00I51885U","items":{"B00I51885U":{"asin":"B00I51885U","title":"Carroten Intensive Tanning Gel","url":"https://www.amazon.com/dp/B00I51885U","image_url":"https://m.media-amazon.com/images/I/41vNUZ6wI5L.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>The TikTok-viral Greek tanning gel that uses beta-carotene and coconut oil to develop a rich, natural-looking bronze in actual sunlight.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#129365;&nbsp; Beta-carotene from carrot oil naturally enhances melanin activation</li>
+<li>&#127796;&nbsp; Coconut oil delivers deep hydration while you tan</li>
+<li>&#128167;&nbsp; Non-greasy, water-resistant gel texture that won't slide off</li>
+<li>&#127468;&#127479;&nbsp; Made in Greece with a Mediterranean tanning heritage</li>
+<li>&#128170;&nbsp; Vitamin A and E protect and nourish sun-exposed skin</li>
+<li>&#128241;&nbsp; Viral on TikTok with 20K+ bought on Amazon last month</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Beta-carotene gives a warm, golden undertone rather than orange</li><li>Water-resistant so it stays put through swimming and sweating</li><li>Non-greasy gel texture that feels lighter than oil</li><li>Visible color difference after just one sun session</li><li>Made in Greece with decades of tanning product expertise</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>No SPF protection, so sunburn risk without separate sunscreen</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"This stuff is everywhere on TikTok for a reason. One afternoon in the sun and I had a tan that usually takes me a full week to build. The gel texture is way less messy than oils."</p><p class="dyu-review-author">Alexis P. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"Bought it because every Greek girl on my feed swore by it. They were right. The color is warm and natural, not orange. I've used it all summer."</p><p class="dyu-review-author">Maria S. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> The beta-carotene is the real differentiator here. It gives your tan a warm golden undertone rather than the red-orange that cheaper accelerators produce. Use it with separate SPF and you get deep color without the damage.</p></div>
+</div>
+</div>
+
+<div id="review-4">
+<span class="dyu-rank-badge">Best Face & Body Set</span>
+<h4>4. Self Tanner Face & Body with Organic Aloe Vera & Shea Butter</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B09S6RS8BN","asin_manual":"B09S6RS8BN","items":{"B09S6RS8BN":{"asin":"B09S6RS8BN","title":"Self Tanner Face & Body with Organic Aloe Vera & Shea Butter","url":"https://www.amazon.com/dp/B09S6RS8BN","image_url":"https://m.media-amazon.com/images/I/41c1NR-JsyL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>A two-bottle set designed for people who want one brand for both face and body, with organic aloe and shea butter keeping things gentle.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#127807;&nbsp; Organic aloe vera and shea butter base for sensitive skin</li>
+<li>&#128102;&nbsp; Separate face formula with a lighter, non-comedogenic texture</li>
+<li>&#127912;&nbsp; Buildable from fair to medium with layered applications</li>
+<li>&#128683;&nbsp; No parabens, sulfates, or harsh chemicals in the formula</li>
+<li>&#9201;&#65039;&nbsp; Develops in 4-8 hours with no guide color</li>
+<li>&#129528;&nbsp; Two-bottle set covers face and body in one purchase</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Dedicated face formula means no breakouts from body-grade tanners</li><li>Organic aloe and shea butter genuinely moisturize while coloring</li><li>Buildable color that's forgiving for beginners</li><li>Clean ingredient list with no parabens or sulfates</li><li>Two bottles in one purchase covers the whole body</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>No guide color, so you can't see where you've applied until it develops</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"Finally a self-tanner I can use on my face without breaking out. The body lotion is great too but the face formula is what sold me. Gentle, no clogged pores, natural color."</p><p class="dyu-review-author">Rachel T. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"I have sensitive skin and most self-tanners make me red and itchy. This one actually calms my skin while it tans. The aloe vera is real, not just marketing."</p><p class="dyu-review-author">Jen C. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> Best option for anyone who wants to use the same brand on both face and body without worrying about breakouts. The organic base keeps things gentle, and the buildable formula means you control the depth.</p></div>
+</div>
+</div>
+
+<div id="review-5">
+<span class="dyu-rank-badge">Best Customizable Formula</span>
+<h4>5. TAN-LUXE THE BODY Self Tan Drops</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B07F3T1C9H","asin_manual":"B07F3T1C9H","items":{"B07F3T1C9H":{"asin":"B07F3T1C9H","title":"TAN-LUXE THE BODY Self Tan Drops","url":"https://www.amazon.com/dp/B07F3T1C9H","image_url":"https://m.media-amazon.com/images/I/31gyzmMFB9L.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>Premium self-tan drops you mix into your existing body lotion for a completely custom shade, from barely-there glow to vacation bronze.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#128167;&nbsp; Add 2-4 drops to any body lotion for a customized tan shade</li>
+<li>&#129516;&nbsp; Raspberry seed oil and vitamin E nourish while coloring</li>
+<li>&#127912;&nbsp; Medium/Dark shade for olive and deeper skin tones</li>
+<li>&#10024;&nbsp; Caffeine-rich complex helps skin appear firmer</li>
+<li>&#128683;&nbsp; No guide color means no stained sheets or clothes</li>
+<li>&#127870;&nbsp; Luxury brand stocked at Sephora and high-end retailers</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Total control over shade depth with every application</li><li>Mixes into your favorite existing lotion seamlessly</li><li>No self-tanner smell during or after development</li><li>Raspberry seed oil leaves skin genuinely softer</li><li>Travel-friendly small bottle lasts months of use</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Premium price at $49 for a 1.69 oz bottle</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"I add 3 drops to my regular CeraVe and wake up looking like I spent the weekend at the coast. No smell, no streaks, no new bottle to find shelf space for. Genius product."</p><p class="dyu-review-author">Charlotte W. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"Expensive per ounce but it lasts forever because you only use a few drops. I've had mine four months and it's barely half empty. The tan looks incredibly natural."</p><p class="dyu-review-author">Nina G. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> The smartest self-tan format for people who already have a body lotion they love. A few drops turn any moisturizer into a custom tanner. Premium price but the bottle lasts 4-6 months easily.</p></div>
+</div>
+</div>
+
+<div id="review-6">
+<span class="dyu-rank-badge">Best Ultra Dark Shade</span>
+<h4>6. Sun Laboratories Ultra Dark Sunless Tanning Lotion</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B0009V8N5E","asin_manual":"B0009V8N5E","items":{"B0009V8N5E":{"asin":"B0009V8N5E","title":"Sun Laboratories Ultra Dark Sunless Tanning Lotion","url":"https://www.amazon.com/dp/B0009V8N5E","image_url":"https://m.media-amazon.com/images/I/41uDiKIoc1L.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>For anyone who wants the deepest possible sunless color without UV exposure, this organic formula delivers a dark tan that develops in hours.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#127754;&nbsp; Ultra dark shade for the deepest possible sunless color</li>
+<li>&#127807;&nbsp; Organic DHA formula for a more natural color development</li>
+<li>&#9201;&#65039;&nbsp; Full color develops in 4-6 hours after application</li>
+<li>&#128683;&nbsp; Streak-free formula when applied with a mitt</li>
+<li>&#128170;&nbsp; Lasts 5-7 days before gradual, even fading</li>
+<li>&#129528;&nbsp; Works on body, face, and legs for all-over bronzing</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Darkest shade available for people who want maximum depth</li><li>Organic DHA produces a more natural brown undertone</li><li>Long-lasting color that fades evenly over a week</li><li>Full 8 oz bottle at a reasonable price point</li><li>Works well for special events when you want dramatic color</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Ultra dark shade is unforgiving of streaks if you skip exfoliating</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"This is the only self-tanner that gets me dark enough. Everything else looks like a light glow on my olive skin. This one actually delivers the depth I want for events."</p><p class="dyu-review-author">Priya N. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"I prep with a sugar scrub, apply with a mitt, and it looks like I just came back from two weeks in Bali. The color is brown, not orange. That's rare for ultra-dark formulas."</p><p class="dyu-review-author">Kayla M. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> The right pick if you want genuine depth rather than a subtle glow. The organic DHA gives you a brown tone instead of the orange that cheap ultra-dark formulas default to. Exfoliate and use a mitt for best results.</p></div>
+</div>
+</div>
+
+<div id="review-7">
+<span class="dyu-rank-badge">Best Luxury Shimmer</span>
+<h4>7. Tom Ford Soleil Blanc Shimmering Body Oil Mini</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B0878PQ12S","asin_manual":"B0878PQ12S","items":{"B0878PQ12S":{"asin":"B0878PQ12S","title":"Tom Ford Soleil Blanc Shimmering Body Oil Mini","url":"https://www.amazon.com/dp/B0878PQ12S","image_url":"https://m.media-amazon.com/images/I/31yo2G5iCrL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>A luxury shimmering body oil from Tom Ford that gives skin an instant lit-from-within glow with subtle golden micro-shimmer.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#10024;&nbsp; Micro-shimmer particles catch light for an instant photo-ready glow</li>
+<li>&#127870;&nbsp; Tom Ford Soleil Blanc signature scent — warm, beachy, luxurious</li>
+<li>&#128167;&nbsp; Oil-based formula nourishes and softens skin on contact</li>
+<li>&#127775;&nbsp; Golden-toned shimmer that flatters every skin tone</li>
+<li>&#128142;&nbsp; Mini size perfect for travel or testing the luxury formula</li>
+<li>&#127796;&nbsp; Instant visible effect — no development time needed</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Instant shimmer glow without any development wait time</li><li>Tom Ford Soleil Blanc scent is universally complimented</li><li>Golden shimmer looks natural on all skin tones</li><li>Oil base leaves skin genuinely soft and nourished</li><li>Mini size makes luxury accessible as a trial or travel option</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Premium price even for the mini size</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"I wear this on date nights and get compliments every single time. The shimmer is subtle enough for real life but shows up beautifully in photos. The scent alone is worth it."</p><p class="dyu-review-author">Danielle V. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"Splurged on the mini and now I understand the hype. It makes my legs look like they belong in a magazine. The golden shimmer is the perfect tone — not glittery, just glowy."</p><p class="dyu-review-author">Chloe B. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> Not a self-tanner — it is an instant shimmer that makes skin look expensive. Perfect for events, date nights, or anytime you want your skin to catch light. The scent is the bonus that elevates it from cosmetic to experience.</p></div>
+</div>
+</div>
+
+<div id="review-8">
+<span class="dyu-rank-badge">Best Melanin Booster</span>
+<h4>8. Onyx Strongest Dark Tanning Accelerator Lotion</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B0D79FQMNF","asin_manual":"B0D79FQMNF","items":{"B0D79FQMNF":{"asin":"B0D79FQMNF","title":"Onyx Strongest Dark Tanning Accelerator Lotion","url":"https://www.amazon.com/dp/B0D79FQMNF","image_url":"https://m.media-amazon.com/images/I/41wdMJA6UZL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>A bronzer-free melanin accelerator that works in tanning beds and outdoor sun alike, with a tropical scent and no-stain formula.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#128293;&nbsp; Accelerates melanin production for faster, deeper tanning results</li>
+<li>&#128683;&nbsp; Bronzer-free formula means no stains on clothes or sheets</li>
+<li>&#127796;&nbsp; Works equally well in tanning beds and under natural sun</li>
+<li>&#128167;&nbsp; Super moisturizing formula prevents dryness during tanning</li>
+<li>&#127796;&nbsp; Tropical scent that smells like a beach vacation</li>
+<li>&#9889;&nbsp; Fast-absorbing, non-greasy texture for immediate comfort</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Bronzer-free means zero risk of staining clothes or bedding</li><li>Works for both indoor tanning beds and outdoor sessions</li><li>Moisturizing enough to replace a separate body lotion on tan days</li><li>Tropical scent that lasts hours after application</li><li>No-streak formula even without a tanning mitt</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Newer product with fewer reviews than established competitors</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"I use this for my tanning bed sessions and it genuinely speeds up the process. Two sessions with this versus four without. Plus it smells amazing and doesn't stain my white towels."</p><p class="dyu-review-author">Amber L. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"Finally a tanning accelerator that doesn't leave brown streaks on everything I own. The tropical scent is a bonus. My tan has never been this even."</p><p class="dyu-review-author">Megan H. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> Best for indoor tanners who are tired of bronzer stains on towels and sheets. The melanin acceleration is noticeable — you will tan faster and darker with fewer sessions. The no-stain formula is the real selling point.</p></div>
+</div>
+</div>
+
+<div id="review-9">
+<span class="dyu-rank-badge">Best Tanning Oil</span>
+<h4>9. Panama Jack Sunscreen Tanning Oil SPF 4</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B00KYVOQHI","asin_manual":"B00KYVOQHI","items":{"B00KYVOQHI":{"asin":"B00KYVOQHI","title":"Panama Jack Sunscreen Tanning Oil SPF 4","url":"https://www.amazon.com/dp/B00KYVOQHI","image_url":"https://m.media-amazon.com/images/I/31sy+6eOneL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>A classic beach tanning oil with actual SPF 4 protection, exotic oils, and antioxidants that make your skin glow while you bronze.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#127774;&nbsp; SPF 4 provides minimal sun protection while allowing tanning</li>
+<li>&#127796;&nbsp; Exotic oils including macadamia, mango, and sweet almond</li>
+<li>&#128137;&nbsp; Antioxidant formula with fruit and nut extracts</li>
+<li>&#128683;&nbsp; PABA-free, paraben-free, gluten-free, and cruelty-free</li>
+<li>&#127754;&nbsp; Classic tropical island fragrance that smells like vacation</li>
+<li>&#128167;&nbsp; Light oil formula that doesn't feel heavy or sticky</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>One of the few tanning oils that includes any SPF at all</li><li>Exotic oil blend leaves skin genuinely softer and nourished</li><li>Classic tropical scent that screams beach vacation</li><li>Clean ingredient list — PABA-free, paraben-free, cruelty-free</li><li>Affordable at under $13 for a full 8 oz bottle</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>SPF 4 is minimal protection — not enough for extended sun exposure alone</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"This is the oil that makes beach days feel like a ritual. The scent, the golden sheen, the way my skin feels after. I've used Panama Jack since high school and nothing else compares."</p><p class="dyu-review-author">Stephanie G. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"The exotic oils actually leave my skin softer than any lotion does. I use it at the pool and the slight SPF gives me peace of mind while I tan. Classic summer staple."</p><p class="dyu-review-author">Derek J. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> The nostalgic beach oil that still outperforms most newer options. The SPF 4 is minimal but it is more than zero, and the exotic oil blend genuinely nourishes. Perfect for controlled tanning sessions when you know your limits.</p></div>
+</div>
+</div>
+
+<div id="review-10">
+<span class="dyu-rank-badge">Best No-Transfer Formula</span>
+<h4>10. + Lux Unfiltered N°32 Summer Skin Gradual Self Tanner</h4>
+<div class="dyu-hostinger-wrap">
+<!-- wp:hostinger-affiliate-plugin/block {"display_type":"multiple_product_list","product_selector":"layout","product_list_type":"manual","list_navigation":"manual","list_layout_selected":true,"list_layout":"list_with_description","asin":"B09QW7MT65","asin_manual":"B09QW7MT65","items":{"B09QW7MT65":{"asin":"B09QW7MT65","title":"+ Lux Unfiltered N°32 Summer Skin Gradual Self Tanner","url":"https://www.amazon.com/dp/B09QW7MT65","image_url":"https://m.media-amazon.com/images/I/31+LVC0+MsL.jpg"}},"description_enabled":true,"description_forced":true,"ready":true} /-->
+</div>
+<p><em>A luxury gradual self-tanner that dries instantly, transfers to nothing, and builds a natural glow that looks like you spent a weekend outdoors.</em></p>
+<div class="dyu-gold-block">
+<h5>Key Features</h5>
+<ul>
+<li>&#128683;&nbsp; No-transfer formula that won't stain sheets, clothes, or furniture</li>
+<li>&#127807;&nbsp; Shea butter and squalane for deep hydration with every application</li>
+<li>&#127912;&nbsp; Gradual color build for a natural, streak-free result</li>
+<li>&#10024;&nbsp; Santal scent that smells like luxury fragrance, not self-tanner</li>
+<li>&#128302;&nbsp; Vegan, gluten-free, and cruelty-free formula</li>
+<li>&#9201;&#65039;&nbsp; Dries in seconds so you can dress immediately after</li>
+</ul>
+<div class="dyu-pros-cons">
+<div class="dyu-pros"><h6>Pros</h6><ul><li>Genuinely zero transfer — white sheets stay white</li><li>Santal scent is sophisticated enough to skip perfume</li><li>Shea butter and squalane leave skin noticeably softer</li><li>Dries almost instantly with no sticky or tacky phase</li><li>Gradual build gives you total control over depth</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Premium price at $32 for a gradual formula that takes multiple days</li></ul></div>
+</div>
+<h5>What Customers Are Saying</h5>
+<div class="dyu-review-block"><p>"I wore white silk pants the same night I applied this. Zero transfer. I've never trusted a self-tanner enough to do that before. The scent is also incredible."</p><p class="dyu-review-author">Jordan L. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-review-block"><p>"This replaced my entire body lotion routine. It moisturizes better than most lotions and I wake up a shade warmer each morning. The no-transfer claim is 100% real."</p><p class="dyu-review-author">Alyssa M. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+<div class="dyu-our-take"><p><strong>Our Take:</strong> The premium pick for anyone who has ruined white sheets with self-tanner before. The no-transfer formula actually works, the santal scent is beautiful, and the shea-squalane base is a genuine moisturizer. Worth the price if transfer anxiety is your issue.</p></div>
+</div>
+</div>
+
+<hr class="dyu-divider">
+
+<h4 id="faq">Frequently Asked Questions About Tanning Lotions</h4>
+
+<div class="dyu-faq-item">
+<p class="dyu-faq-q">Q1. What is the difference between a tanning lotion, tanning oil, and self-tanner?</p>
+<p>Tanning lotions and oils are designed to be used with UV exposure &mdash; either outdoors in sunlight or indoors in a tanning bed. They accelerate your skin's natural melanin production so you tan faster and darker. Self-tanners, on the other hand, use DHA (dihydroxyacetone) to chemically darken the outer layer of skin without any UV at all. The tan from a self-tanner fades as your skin naturally sheds over 5-10 days, while a UV tan lasts longer but carries more skin damage risk.</p>
+</div>
+<div class="dyu-faq-item">
+<p class="dyu-faq-q">Q2. Can I use a tanning accelerator without sunscreen?</p>
+<p>You can, but you probably shouldn't for extended sessions. Tanning accelerators boost melanin production but offer zero UV protection unless they specifically list an SPF. For short sessions (under 20 minutes) some people skip sunscreen intentionally to maximize tan development. For anything longer, apply a separate SPF 30+ sunscreen and use the accelerator underneath &mdash; you will still tan, just more slowly and with significantly less skin damage risk.</p>
+</div>
+<div class="dyu-faq-item">
+<p class="dyu-faq-q">Q3. How do I prevent streaks when applying self-tanner?</p>
+<p>Three rules prevent most streaking: exfoliate 24 hours before application (focus on knees, elbows, ankles, and wrists), apply with a tanning mitt in long sweeping motions rather than circular rubbing, and use less product on joints and bony areas where DHA tends to collect. For the face, mix a few drops into your regular moisturizer instead of applying self-tanner directly. Wait at least 10 minutes before getting dressed, and avoid water for 6-8 hours while the color develops.</p>
+</div>
+<div class="dyu-faq-item">
+<p class="dyu-faq-q">Q4. How long does a self-tan last compared to a UV tan?</p>
+<p>A self-tan from DHA-based products typically lasts 5-10 days depending on how often you shower and exfoliate. A UV tan from sun or tanning beds lasts 2-4 weeks because the color sits in deeper skin layers. Gradual tanners (like the L'Oreal Sublime Bronze on this list) last only as long as you keep applying them daily &mdash; skip a few days and the color fades back to baseline. For longest-lasting self-tan results, moisturize daily and avoid harsh scrubs.</p>
+</div>
+<div class="dyu-faq-item">
+<p class="dyu-faq-q">Q5. Are tanning drops better than traditional self-tanners?</p>
+<p>Tanning drops (like Tan-Luxe) give you more control over shade depth because you decide how many drops to add to your lotion. They are excellent for people who want a subtle glow or who want to customize darkness for different body parts. Traditional self-tanners apply the same concentration everywhere, which works well for all-over even color. Drops are better for faces and gradual building; mousses and lotions are better for full-body application in one session.</p>
+</div>
+<div class="dyu-faq-item">
+<p class="dyu-faq-q">Q6. Is indoor tanning safer than outdoor tanning?</p>
+<p>Neither is completely safe &mdash; both expose skin to UV radiation that causes premature aging and increases skin cancer risk. Indoor tanning beds emit concentrated UVA radiation that penetrates deeper into the skin. The only truly safe tan comes from self-tanners that use DHA with zero UV exposure. If you do use UV (sun or bed), limit sessions, never burn, use an accelerator to reduce total UV time needed, and monitor your skin for any changes in moles or marks.</p>
+</div>
+
+<div class="dyu-helpful-box">
+  <p><strong>Found This Guide Helpful?</strong></p>
+  <p>Bookmark GlowPick for more independently researched beauty and skincare guides &mdash; we cover tanning, skincare, body care, and wellness, all without brand sponsorship or paid placements.</p>
+  <p>If this saved you from a streaky disaster or a wasted purchase, share it with someone who could use the same shortcut.</p>
+</div>
+
+<hr class="dyu-divider">
+
+<p style="text-align:center; font-family: Arial, sans-serif; font-size: 0.93em; color: #555;">Drop your go-to tanning routine in the comments &mdash; bonus points if you've found something that doesn't stain white sheets.</p>
+
+<!-- wp:post-comments-form /-->
+
+<!-- wp:comments /-->
+
+</div>
