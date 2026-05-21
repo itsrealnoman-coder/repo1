@@ -1,0 +1,122 @@
+[
+  {
+    "asin": "B00T7MZQ3S",
+    "title": "Australian Gold Rapid Tanning Intensifier Lotion",
+    "short_name": "Australian Gold Rapid Tanning Intensifier",
+    "size": "8.5 Fl Oz",
+    "price": 7.37,
+    "rating": 4.6,
+    "reviews": 17600,
+    "image_url": "https://m.media-amazon.com/images/I/41yGeo8I0IL.jpg",
+    "best_for": "Budget Tan Accelerator",
+    "key_detail": "Tea Tree Oil & Aloe Vera"
+  },
+  {
+    "asin": "B000NPWQU4",
+    "title": "L'Oreal Paris Sublime Bronze Glow Daily Moisturizer",
+    "short_name": "L'Oreal Sublime Bronze Daily Moisturizer",
+    "size": "8 Fl Oz",
+    "price": 13.99,
+    "rating": 4.5,
+    "reviews": 9636,
+    "image_url": "https://m.media-amazon.com/images/I/31Tpbe7ffpL.jpg",
+    "best_for": "Gradual Everyday Glow",
+    "key_detail": "Medium Skin Tones"
+  },
+  {
+    "asin": "B00I51885U",
+    "title": "Carroten Intensive Tanning Gel",
+    "short_name": "Carroten Intensive Tanning Gel",
+    "size": "5 Fl Oz",
+    "price": 29.99,
+    "rating": 4.3,
+    "reviews": 9900,
+    "image_url": "https://m.media-amazon.com/images/I/41vNUZ6wI5L.jpg",
+    "best_for": "Deep Natural Browning",
+    "key_detail": "Carrot & Coconut Oil"
+  },
+  {
+    "asin": "B09S6RS8BN",
+    "title": "Self Tanner Face & Body with Organic Aloe Vera & Shea Butter",
+    "short_name": "Self Tanner Face & Body (Aloe & Shea)",
+    "size": "7.5 oz body + 3 oz face",
+    "price": 24.97,
+    "rating": 4.3,
+    "reviews": 8500,
+    "image_url": "https://m.media-amazon.com/images/I/41c1NR-JsyL.jpg",
+    "best_for": "Face & Body Combo",
+    "key_detail": "Organic Aloe & Shea Butter"
+  },
+  {
+    "asin": "B07F3T1C9H",
+    "title": "TAN-LUXE THE BODY Self Tan Drops",
+    "short_name": "Tan-Luxe THE BODY Self Tan Drops",
+    "size": "1.69 Fl Oz",
+    "price": 49.0,
+    "rating": 4.2,
+    "reviews": 7600,
+    "image_url": "https://m.media-amazon.com/images/I/31gyzmMFB9L.jpg",
+    "best_for": "Customizable Drop-By-Drop Tan",
+    "key_detail": "Add to Any Lotion"
+  },
+  {
+    "asin": "B0009V8N5E",
+    "title": "Sun Laboratories Ultra Dark Sunless Tanning Lotion",
+    "short_name": "Sun Labs Ultra Dark Tanning Lotion",
+    "size": "8 Fl Oz",
+    "price": 27.3,
+    "rating": 4.3,
+    "reviews": 2900,
+    "image_url": "https://m.media-amazon.com/images/I/41uDiKIoc1L.jpg",
+    "best_for": "Deepest Sunless Color",
+    "key_detail": "Organic Self Tanner"
+  },
+  {
+    "asin": "B0878PQ12S",
+    "title": "Tom Ford Soleil Blanc Shimmering Body Oil Mini",
+    "short_name": "Tom Ford Soleil Blanc Shimmering Body Oil",
+    "size": "Mini Size",
+    "price": 39.95,
+    "rating": 4.5,
+    "reviews": 897,
+    "image_url": "https://m.media-amazon.com/images/I/31yo2G5iCrL.jpg",
+    "best_for": "Luxury Shimmer & Glow",
+    "key_detail": "Shimmering Body Oil"
+  },
+  {
+    "asin": "B0D79FQMNF",
+    "title": "Onyx Strongest Dark Tanning Accelerator Lotion",
+    "short_name": "Onyx Dark Tanning Accelerator",
+    "size": "8.5 Fl Oz",
+    "price": 29.95,
+    "rating": 4.4,
+    "reviews": 520,
+    "image_url": "https://m.media-amazon.com/images/I/41wdMJA6UZL.jpg",
+    "best_for": "Indoor & Outdoor Melanin Boost",
+    "key_detail": "No SPF | Tropical Scent"
+  },
+  {
+    "asin": "B00KYVOQHI",
+    "title": "Panama Jack Sunscreen Tanning Oil SPF 4",
+    "short_name": "Panama Jack Tanning Oil SPF 4",
+    "size": "8 Fl Oz",
+    "price": 12.95,
+    "rating": 4.6,
+    "reviews": 414,
+    "image_url": "https://m.media-amazon.com/images/I/31sy+6eOneL.jpg",
+    "best_for": "Sun Tanning Oil with SPF",
+    "key_detail": "Exotic Oils & Antioxidants"
+  },
+  {
+    "asin": "B09QW7MT65",
+    "title": "+ Lux Unfiltered N\u00b032 Summer Skin Gradual Self Tanner",
+    "short_name": "+ Lux Unfiltered N\u00b032 Gradual Self Tanner",
+    "size": "10 Fl Oz",
+    "price": 32.0,
+    "rating": 4.6,
+    "reviews": 216,
+    "image_url": "https://m.media-amazon.com/images/I/31+LVC0+MsL.jpg",
+    "best_for": "No-Transfer Gradual Glow",
+    "key_detail": "Shea Butter & Squalane"
+  }
+]
