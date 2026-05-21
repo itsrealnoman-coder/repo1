@@ -112,8 +112,8 @@
 .dyu-gold-block { border: none; padding: 4px 0; margin: 0.8em 0; }
 
 /* ===== PROS CONS ===== */
-.dyu-pros-cons { display: flex; gap: 14px; margin: 1em 0; flex-wrap: wrap; }
-.dyu-pros, .dyu-cons { flex: 1; min-width: 200px; background: #f8f8f8; border-radius: 6px; padding: 10px 14px; }
+.dyu-pros-cons { display: flex; flex-direction: column; gap: 14px; margin: 1em 0; }
+.dyu-pros, .dyu-cons { width: 100%; background: #f8f8f8; border-radius: 6px; padding: 10px 14px; }
 .dyu-pros { border-top: 3px solid #27ae60; }
 .dyu-cons { border-top: 3px solid #e74c3c; }
 .dyu-pros h6, .dyu-cons h6 { margin: 0 0 7px; font-family: Arial, sans-serif; font-size: 0.88em; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -142,7 +142,6 @@
 .dyu-article { width: 100%; max-width: 860px; }
 @media (max-width: 580px) {
   .dyu-article { padding: 0 4px; }
-  .dyu-pros-cons { flex-direction: column; }
   .dyu-evidence-tooltip { width: min(280px, 90vw); right: 0; }
   .dyu-author-popup { min-width: min(220px, 80vw); max-width: min(280px, 85vw); }
   .dyu-table-wrapper { margin-left: -4px; margin-right: -4px; }
@@ -426,7 +425,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 <div class="dyu-pros-cons">
 <div class="dyu-pros"><h6>Pros</h6><ul><li>Safe for face and body</li><li>Completely unscented</li><li>Sinks in cleanly, no greasy film</li><li>Works well even for eczema-prone skin</li><li>Genuinely great value for the size</li></ul></div>
-<div class="dyu-cons"><h6>Cons</h6><ul><li>Tub format — fingers in the product every time</li><li>No scent at all if that matters to you</li><li>Gets slightly thicker in cold rooms</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Tub format — fingers in the product every time</li></ul></div>
 </div>
 <h5>What Customers Are Saying</h5>
 <div class="dyu-review-block"><p>"Three years in, my eczema is calmer than it has ever been. I put this on twice a day and my skin actually just feels normal — not tight, not itchy, not flaky. That used to feel impossible."</p><p class="dyu-review-author">Jessica M. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
@@ -454,7 +453,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 <div class="dyu-pros-cons">
 <div class="dyu-pros"><h6>Pros</h6><ul><li>Genuinely lightweight, almost gel-like in feel</li><li>24-hour moisture claim actually holds up</li><li>Iconic Vanilla Cashmere scent</li><li>Pump bottle with no clogging issues</li><li>Vegan and cruelty-free</li></ul></div>
-<div class="dyu-cons"><h6>Cons</h6><ul><li>Scent is strong — overpowering for some noses</li><li>Not heavy enough alone for very dry winter skin</li><li>Pump bottle gets stuck in the last 10% of product</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Scent is strong — overpowering for some noses</li></ul></div>
 </div>
 <h5>What Customers Are Saying</h5>
 <div class="dyu-review-block"><p>"I've gone through six bottles in two years. Goes on like silk, smells gorgeous, and I never feel like I'm leaving a residue on the sheets at night. The pump even lasts the whole bottle if you don't slam it."</p><p class="dyu-review-author">Lauren P. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
@@ -482,7 +481,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 <div class="dyu-pros-cons">
 <div class="dyu-pros"><h6>Pros</h6><ul><li>Genuinely fragrance-free — no masking scent</li><li>Calms eczema flares within a couple of days</li><li>Pump bottle dispenses cleanly</li><li>Excellent value for the size</li><li>Safe for kids and adults both</li></ul></div>
-<div class="dyu-cons"><h6>Cons</h6><ul><li>Plain experience if you like scented products</li><li>Texture is on the thinner side</li><li>Not enough for very dry skin in deep winter without layering</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Plain experience if you like scented products</li></ul></div>
 </div>
 <h5>What Customers Are Saying</h5>
 <div class="dyu-review-block"><p>"This is the only lotion my dermatologist would let me use during my pregnancy. I kept using it after. It is unfussy, it works, and it has never caused a reaction. That is rare."</p><p class="dyu-review-author">Hannah B. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
@@ -510,7 +509,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 <div class="dyu-pros-cons">
 <div class="dyu-pros"><h6>Pros</h6><ul><li>Real cocoa scent, no synthetic chocolate notes</li><li>Genuinely fades stretch marks with consistent use</li><li>Pump bottle is more hygienic than tubs</li><li>One of the cheapest lotions per ounce on this list</li><li>Reliable formula that hasn't changed for decades</li></ul></div>
-<div class="dyu-cons"><h6>Cons</h6><ul><li>Strong cocoa scent — divisive</li><li>Heavier feel than gel lotions, slower absorption</li><li>Not ideal under perfume</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Strong cocoa scent — divisive</li></ul></div>
 </div>
 <h5>What Customers Are Saying</h5>
 <div class="dyu-review-block"><p>"Used this through both pregnancies. My stretch marks faded faster than they did with my first when I used a much pricier brand. The smell is comforting — it reminds me of my grandmother's bathroom shelf."</p><p class="dyu-review-author">Renata D. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
@@ -538,7 +537,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 <div class="dyu-pros-cons">
 <div class="dyu-pros"><h6>Pros</h6><ul><li>Sinks in faster than any cream on this list</li><li>Hyaluronic acid hydration that holds up all day</li><li>No greasy feel, no transfer to clothes</li><li>Great under sunscreen or makeup primers</li><li>Fragrance-free option for layering with perfume</li></ul></div>
-<div class="dyu-cons"><h6>Cons</h6><ul><li>Not rich enough for very dry skin in winter</li><li>Hydration tops out around the 6–8 hour mark</li><li>Gel finish feels different — takes a few uses to adjust</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Not rich enough for very dry skin in winter</li></ul></div>
 </div>
 <h5>What Customers Are Saying</h5>
 <div class="dyu-review-block"><p>"This saved my summer. Every other lotion felt like a sweater on my arms by 11 a.m. — this disappears and my skin still feels hydrated through to the evening. Buying three more for the gym bag."</p><p class="dyu-review-author">Priya N. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
@@ -566,7 +565,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 <div class="dyu-pros-cons">
 <div class="dyu-pros"><h6>Pros</h6><ul><li>3-pack pricing beats single-bottle drugstore equivalents</li><li>Real cocoa butter scent, warm and chocolatey</li><li>Visible glow effect on legs and arms</li><li>Long-lasting formula, holds up overnight</li><li>Solid value for households or gifting</li></ul></div>
-<div class="dyu-cons"><h6>Cons</h6><ul><li>Strong cocoa scent that some find too sweet</li><li>Slightly heavier feel than newer gel formulas</li><li>3-pack is a commitment if you've never tried the scent</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Strong cocoa scent that some find too sweet</li></ul></div>
 </div>
 <h5>What Customers Are Saying</h5>
 <div class="dyu-review-block"><p>"I rotate this with CeraVe and they do different jobs. CeraVe for repair, this one for the glow. After a month my legs actually photograph differently. The 3-pack lasts me about half a year."</p><p class="dyu-review-author">Tessa C. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
@@ -594,7 +593,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 <div class="dyu-pros-cons">
 <div class="dyu-pros"><h6>Pros</h6><ul><li>Truly 72-hour moisture, tested through workouts</li><li>Weightless texture despite the rich formula</li><li>Smells incredible without being overwhelming</li><li>Excellent for night application</li><li>A little goes a long way — jar lasts months</li></ul></div>
-<div class="dyu-cons"><h6>Cons</h6><ul><li>Smaller jar than expected for the price point</li><li>Scent transfers to clothes and lingers</li><li>Jar format means fingers in product every time</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Smaller jar than expected for the price point</li></ul></div>
 </div>
 <h5>What Customers Are Saying</h5>
 <div class="dyu-review-block"><p>"I tried this on a whim and now I refuse to use anything else at night. Two days after I apply it I can still feel the softness. My partner keeps asking what I'm wearing — every time it's just this."</p><p class="dyu-review-author">Brittany L. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
@@ -622,7 +621,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 <div class="dyu-pros-cons">
 <div class="dyu-pros"><h6>Pros</h6><ul><li>Vanilla scent that smells like real bakery, not synthetic</li><li>Sinks in fast, dressed within a minute</li><li>Big 14 oz size for the price</li><li>Pump dispenses cleanly with one hand</li><li>Lightweight enough for daily use year-round</li></ul></div>
-<div class="dyu-cons"><h6>Cons</h6><ul><li>Scent is on the sweeter side, not for fragrance-sensitive folks</li><li>Thinner consistency than the original Jergens range</li><li>Not rich enough on its own for very dry winter skin</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Scent is on the sweeter side, not for fragrance-sensitive folks</li></ul></div>
 </div>
 <h5>What Customers Are Saying</h5>
 <div class="dyu-review-block"><p>"This is now my daily lotion. The vanilla scent is the kind that makes my husband ask what perfume I'm wearing. It is just the lotion. Lasts about six hours on my arms before fading."</p><p class="dyu-review-author">Megan K. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
@@ -650,7 +649,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 <div class="dyu-pros-cons">
 <div class="dyu-pros"><h6>Pros</h6><ul><li>Iconic, instantly recognisable scent</li><li>Lightweight feel, sinks in fast</li><li>Travel-friendly tube format</li><li>Looks great on a vanity</li><li>Genuinely vegan and clean-ingredient</li></ul></div>
-<div class="dyu-cons"><h6>Cons</h6><ul><li>Scent is polarising — coconut + floral isn't for everyone</li><li>Tube format finishes faster than a 16 oz pump</li><li>Premium pricing per ounce vs drugstore options</li><li>Not heavy enough for very dry skin</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Scent is polarising — coconut + floral isn't for everyone</li></ul></div>
 </div>
 <h5>What Customers Are Saying</h5>
 <div class="dyu-review-block"><p>"I was sceptical of the TikTok hype but it deserved it. The Pink Beach scent is exactly what summer should smell like. I keep one tube on my nightstand and one in my gym bag."</p><p class="dyu-review-author">Olivia W. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
@@ -678,7 +677,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 <div class="dyu-pros-cons">
 <div class="dyu-pros"><h6>Pros</h6><ul><li>Real essential oils, not synthetic dupes</li><li>The scent genuinely helps focus during work</li><li>Premium feel from the bottle to the formula</li><li>Hydrates without feeling like a lotion</li><li>Multi-purpose — body, hand, and ritual</li></ul></div>
-<div class="dyu-cons"><h6>Cons</h6><ul><li>Premium price for a 10 oz bottle</li><li>Scent is herbal and adult — not for those who want sweet</li><li>Niche use case, not a daily go-to for most</li><li>Limited US availability outside Amazon</li></ul></div>
+<div class="dyu-cons"><h6>Cons</h6><ul><li>Premium price for a 10 oz bottle</li></ul></div>
 </div>
 <h5>What Customers Are Saying</h5>
 <div class="dyu-review-block"><p>"Bought this for working from home and it's become a strange anchor in my morning. I rub it in, the rosemary hits, and I'm at my desk feeling like I have a plan. Worth the price for that alone."</p><p class="dyu-review-author">Sophia G. | Amazon Customer &mdash; &#9733;&#9733;&#9733;&#9733;&#9733;</p></div>

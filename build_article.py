@@ -42,8 +42,6 @@ PRODUCTS = [
         ],
         "cons": [
             "Scent is on the sweeter side, not for fragrance-sensitive folks",
-            "Thinner consistency than the original Jergens range",
-            "Not rich enough on its own for very dry winter skin",
         ],
         "reviews": [
             ("\"This is now my daily lotion. The vanilla scent is the kind that makes my husband ask what perfume I'm wearing. It is just the lotion. Lasts about six hours on my arms before fading.\"", "Megan K. | Amazon Customer"),
@@ -81,8 +79,6 @@ PRODUCTS = [
         ],
         "cons": [
             "Scent is strong — overpowering for some noses",
-            "Not heavy enough alone for very dry winter skin",
-            "Pump bottle gets stuck in the last 10% of product",
         ],
         "reviews": [
             ("\"I've gone through six bottles in two years. Goes on like silk, smells gorgeous, and I never feel like I'm leaving a residue on the sheets at night. The pump even lasts the whole bottle if you don't slam it.\"", "Lauren P. | Amazon Customer"),
@@ -120,8 +116,6 @@ PRODUCTS = [
         ],
         "cons": [
             "Smaller jar than expected for the price point",
-            "Scent transfers to clothes and lingers",
-            "Jar format means fingers in product every time",
         ],
         "reviews": [
             ("\"I tried this on a whim and now I refuse to use anything else at night. Two days after I apply it I can still feel the softness. My partner keeps asking what I'm wearing — every time it's just this.\"", "Brittany L. | Amazon Customer"),
@@ -159,9 +153,6 @@ PRODUCTS = [
         ],
         "cons": [
             "Premium price for a 10 oz bottle",
-            "Scent is herbal and adult — not for those who want sweet",
-            "Niche use case, not a daily go-to for most",
-            "Limited US availability outside Amazon",
         ],
         "reviews": [
             ("\"Bought this for working from home and it's become a strange anchor in my morning. I rub it in, the rosemary hits, and I'm at my desk feeling like I have a plan. Worth the price for that alone.\"", "Sophia G. | Amazon Customer"),
@@ -199,8 +190,6 @@ PRODUCTS = [
         ],
         "cons": [
             "Tub format — fingers in the product every time",
-            "No scent at all if that matters to you",
-            "Gets slightly thicker in cold rooms",
         ],
         "reviews": [
             ("\"Three years in, my eczema is calmer than it has ever been. I put this on twice a day and my skin actually just feels normal — not tight, not itchy, not flaky. That used to feel impossible.\"", "Jessica M. | Amazon Customer"),
@@ -238,8 +227,6 @@ PRODUCTS = [
         ],
         "cons": [
             "Strong cocoa scent that some find too sweet",
-            "Slightly heavier feel than newer gel formulas",
-            "3-pack is a commitment if you've never tried the scent",
         ],
         "reviews": [
             ("\"I rotate this with CeraVe and they do different jobs. CeraVe for repair, this one for the glow. After a month my legs actually photograph differently. The 3-pack lasts me about half a year.\"", "Tessa C. | Amazon Customer"),
@@ -277,8 +264,6 @@ PRODUCTS = [
         ],
         "cons": [
             "Plain experience if you like scented products",
-            "Texture is on the thinner side",
-            "Not enough for very dry skin in deep winter without layering",
         ],
         "reviews": [
             ("\"This is the only lotion my dermatologist would let me use during my pregnancy. I kept using it after. It is unfussy, it works, and it has never caused a reaction. That is rare.\"", "Hannah B. | Amazon Customer"),
@@ -316,8 +301,6 @@ PRODUCTS = [
         ],
         "cons": [
             "Not rich enough for very dry skin in winter",
-            "Hydration tops out around the 6–8 hour mark",
-            "Gel finish feels different — takes a few uses to adjust",
         ],
         "reviews": [
             ("\"This saved my summer. Every other lotion felt like a sweater on my arms by 11 a.m. — this disappears and my skin still feels hydrated through to the evening. Buying three more for the gym bag.\"", "Priya N. | Amazon Customer"),
@@ -355,8 +338,6 @@ PRODUCTS = [
         ],
         "cons": [
             "Strong cocoa scent — divisive",
-            "Heavier feel than gel lotions, slower absorption",
-            "Not ideal under perfume",
         ],
         "reviews": [
             ("\"Used this through both pregnancies. My stretch marks faded faster than they did with my first when I used a much pricier brand. The smell is comforting — it reminds me of my grandmother's bathroom shelf.\"", "Renata D. | Amazon Customer"),
@@ -394,9 +375,6 @@ PRODUCTS = [
         ],
         "cons": [
             "Scent is polarising — coconut + floral isn't for everyone",
-            "Tube format finishes faster than a 16 oz pump",
-            "Premium pricing per ounce vs drugstore options",
-            "Not heavy enough for very dry skin",
         ],
         "reviews": [
             ("\"I was sceptical of the TikTok hype but it deserved it. The Pink Beach scent is exactly what summer should smell like. I keep one tube on my nightstand and one in my gym bag.\"", "Olivia W. | Amazon Customer"),
@@ -577,8 +555,8 @@ CSS = """
 .dyu-gold-block { border: none; padding: 4px 0; margin: 0.8em 0; }
 
 /* ===== PROS CONS ===== */
-.dyu-pros-cons { display: flex; gap: 14px; margin: 1em 0; flex-wrap: wrap; }
-.dyu-pros, .dyu-cons { flex: 1; min-width: 200px; background: #f8f8f8; border-radius: 6px; padding: 10px 14px; }
+.dyu-pros-cons { display: flex; flex-direction: column; gap: 14px; margin: 1em 0; }
+.dyu-pros, .dyu-cons { width: 100%; background: #f8f8f8; border-radius: 6px; padding: 10px 14px; }
 .dyu-pros { border-top: 3px solid #27ae60; }
 .dyu-cons { border-top: 3px solid #e74c3c; }
 .dyu-pros h6, .dyu-cons h6 { margin: 0 0 7px; font-family: Arial, sans-serif; font-size: 0.88em; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -607,7 +585,6 @@ CSS = """
 .dyu-article { width: 100%; max-width: 860px; }
 @media (max-width: 580px) {
   .dyu-article { padding: 0 4px; }
-  .dyu-pros-cons { flex-direction: column; }
   .dyu-evidence-tooltip { width: min(280px, 90vw); right: 0; }
   .dyu-author-popup { min-width: min(220px, 80vw); max-width: min(280px, 85vw); }
   .dyu-table-wrapper { margin-left: -4px; margin-right: -4px; }
@@ -854,6 +831,49 @@ def main():
     html = "\n\n".join(parts)
     OUTFILE.write_text(html, encoding="utf-8")
     print(f"Wrote {OUTFILE} ({len(html):,} bytes, {html.count(chr(10))+1:,} lines)")
+
+    # --- Generate table-only.html ---
+    table_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{TOPIC} {YEAR} - Comparison Table</title>
+<style>
+{CSS}
+</style>
+</head>
+<body>
+<div class="dyu-article">
+{build_table()}
+</div>
+</body>
+</html>"""
+    table_path = Path("/projects/sandbox/repo1/table-only.html")
+    table_path.write_text(table_html, encoding="utf-8")
+    print(f"Wrote {table_path} ({len(table_html):,} bytes)")
+
+    # --- Generate faq-only.html ---
+    faq_html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{TOPIC} {YEAR} - FAQ</title>
+<style>
+{CSS}
+</style>
+</head>
+<body>
+<div class="dyu-article">
+{build_faq()}
+</div>
+</body>
+</html>"""
+    faq_path = Path("/projects/sandbox/repo1/faq-only.html")
+    faq_path.write_text(faq_html, encoding="utf-8")
+    print(f"Wrote {faq_path} ({len(faq_html):,} bytes)")
+
     return html
 
 
