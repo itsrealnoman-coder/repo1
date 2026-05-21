@@ -1,0 +1,47 @@
+Sr. No,Family No,Family Member,Name,CNIC,CNIC Issue Date,D.O.B,Age,Height (cm),Weight (kg),Heartbeat,Disease,Profession,House Condition,Notes
+1,1,Husband,Arbab Khan,3630203592155,11 February 2019,15 April 1968,58,170,75,72,Rant (Skin condition),,Kaccha,House 4
+2,1,Wife,Bushra Bibi,3630203149538,16 June 2010,1 January 1976,50,155,65,74,Blood Pressure (B.P issue),,Kaccha,House 4
+3,1,Child,Basit Ali,,22 July 2023,,3,95,14,110,None,,Kaccha,House 4 - Mob: 03077325575
+4,1,Child,Shan Ali,,,,,110,18,100,None,,Kaccha,House 4 - Age approx 5
+5,1,Child,Sharjeel Ali,,,,,120,22,95,None,,Kaccha,House 4
+6,1,Wife,Nosheen,3830461121996,,,35,158,60,74,None,,Kaccha,House 4
+7,2,Child,Faryal Khan,,,,,75,10,120,None,,Kaccha,House 4 - Age: 1 year
+8,2,Child,Haniya Khan,,,,,100,15,100,None,,Kaccha,House 4 - Age: 4 years
+9,2,Husband,Mosa Khan,,,,40,172,72,72,None,,Kaccha,House 4 - Mob: 03011836252
+10,1,Wife,Safia Bibi,3630211855452,18 March 2008,9 October 1984,41,157,62,74,None,Housewife,,House 5 - Mob: 03043413885
+11,1,Husband,Muhammad Ali,3630204928545,25 March 2017,15 September 1984,41,172,70,72,None,Labour,,House 5
+12,2,Wife,Gulshan Bibi,36302735892 8,20 May 2011,,40,156,60,74,None,Housewife,,House 5
+13,2,Child,Ayesha,36302734592 8,,25 April 2016,10,130,28,90,None,Student,,House 5
+14,2,Child,Hamza,36302734562 8,,15 May 2017,9,125,25,92,None,Student,,House 5
+15,3,Husband,Muhammad Hanif,36302533787 8,4 October 2015,23 December 1956,69,168,68,70,Sugar/Joint pain,,Pakka,House 5
+16,3,Wife,Nasreen Bibi,3630225533478,4 April 2015,23 December 1983,42,155,58,74,None,Housewife,Pakka,House 5
+17,3,Child,Ahmad,3630297188329,3 October 2015,,20,170,65,72,None,Labour,Pakka,House 5
+18,3,Husband,Muhammad Akram,36302022662 7,,8 March 2004,22,172,68,72,None,Labour,,House 5
+19,3,Wife,Rukhsana,36302025465 6,10 August 2016,12 December 1993,32,156,58,74,None,Housewife,,House 5
+20,3,Child,Bilal,363020220116 27,,8 April 2016,10,130,28,90,None,Student,,House 5
+21,3,Child,Sana,,,,8,120,24,92,None,Student,,House 5
+22,4,Husband,Waseem Hid,36302600908 9,2 September 2020,1 August 1985,40,173,72,72,None,Labour,,House 5
+23,4,Wife,Saima Bibi,36302220930 8,23 April 2021,23 January 1986,40,157,60,74,None,Housewife,,House 5
+24,4,Child,Zulaikha Wasel,3636241462 18,16 January 2026,10 February 2020,6,112,19,100,None,,Kaccha,House 5
+25,1,Child,Busheen,3630261497225,6 March 2024,,17,160,50,76,None,Student,,House 5
+26,1,Child,Memoona Wareen,3630281550838,16 January 2026,1 November 2009,16,155,48,78,None,Matric,,House 6 - Mob: 03017471300
+27,1,Child,Muhammad Ramzan,3630276042811,16 January 2026,16 July 2014,11,140,32,88,None,Class 5,,House 6
+28,1,Child,Zoya,3630244147248,16 January 2026,21 March 2022,4,100,15,100,None,,Kaccha,House 6
+29,2,Husband,Naeem Abid,3630203578935,,,37,172,72,72,Joint Pain/Body Pain,,Kaccha,House 6 - Age: 37 years
+30,2,Wife,Nusrat Naeem,363022215476,,,31,158,60,74,Body Pain (Saalha Dard),,Kaccha,House 6 - Age: 31 years
+31,2,Child,Noor Naeem,3630269006373,21 January 2016,7 October 2007,18,162,50,76,None,Class 10,,House 6
+32,2,Child,Rohail Naeem,3630203578936,,13 March 2010,16,160,48,76,None,Class 10,,House 6
+33,2,Child,Muntaha Naeem,3630269102323,,30 November 2012,13,148,40,82,None,Student,,House 6
+34,2,Saas (Mother-in-law),Shama Akhtar,3630203581330,29 October 2015,1955,71,155,58,68,Under Treatment (Chronic illness),None,,House 6
+35,2,Wife,Khatija Bibi,3630200496068,4 February 2016,1979,47,156,62,74,Pulmonary/Breathing issue (PB),,Kaccha,House 6
+36,3,Child,Salma Bibi,3630274907267,8 July 2021,11 December 2003,22,158,52,74,None,Class 12,,House 6
+37,3,Child,Sumiya,3630226026183,,13 October 2007,18,155,48,76,None,Study,,House 6
+38,3,Child,Nimra,3630245090538,,22 September 2011,14,150,42,80,None,Study,,House 6
+39,3,Child,Inam,3630202783730,,7 November 2016,9,125,25,92,None,Student,,House 6
+40,4,Wife,Farhat Bibi,3630218051684,19 August 2025,23 May 2002,24,157,55,74,None,Housewife,,House 6
+41,4,Husband,Faiz Muhammad,3630285791827,1 March 2021,19 January 1988,38,173,72,72,None,Labour,,House 6
+42,5,Husband,Rauf Khan,3630251716785,,17 April 1998,28,174,70,72,None,Labour,Pakka,House 6
+43,5,Wife,Gul Bibi,3630249854262,,,25,157,55,74,None,Housewife,Pakka,House 6
+44,5,Child,Naveed,,,,,3,95,14,110,None,,Pakka,House 6 - Age: 3 years
+45,5,Child,Naina,,,,,1.5,78,10,120,None,,Pakka,House 6 - Age: 1.5 years
+46,5,Child,Adnan,,,,,1,75,9,125,None,,Pakka,House 6
